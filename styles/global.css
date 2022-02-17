@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nobile&family=Noto+Sans+TC&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body {
   padding: 0;
@@ -6,6 +10,8 @@ body {
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  @apply bg-primary;
+  @apply font-nobile;
 }
 
 * {
