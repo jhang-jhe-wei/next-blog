@@ -1,5 +1,5 @@
-import { ProjectProps } from "../interfaces/portfolio_interface"
-export default function ProjectCard({projectProps}:{projectProps: ProjectProps}) {
+import { ProjectProps } from "../../interfaces/portfolio_interface"
+export default function Card({projectProps}:{projectProps: ProjectProps}) {
   return(
     <div className="mb-12 bg-white font-notosans">
       <img className="" src={projectProps.image} alt="Sunset in the mountains"/>

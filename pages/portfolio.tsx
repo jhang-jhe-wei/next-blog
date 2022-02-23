@@ -1,24 +1,25 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
 import Layout from '../components/layout'
-import ProjectCard from '../components/project_card'
-import { ProjectCardProps } from '../interfaces/project_card_interface'
+import Card from '../components/portfolio/card'
+import Tags from '../components/portfolio/tags'
+import { ProjectProps } from '../interfaces/portfolio_interface'
 import { getPortfolioData } from '../lib/portfolio'
+import { useRouter } from 'next/router'
 
-export default function Portfolio({portfolioData}:{portfolioData:ProjectCardProps[]}): React.ReactElement {
+export default function Portfolio({portfolioData}:{portfolioData:ProjectProps[]}): React.ReactElement {
+  const tags = Array.from(new Set(portfolioData.map(project => project.tag)));
+  const router = useRouter();
+  const queryTag = router.query.tag || tags[0];
+
   return (
     <Layout>
       <Head><title>portfolio</title></Head>
       <div className="container mx-auto">
         <h1 className="text-5xl text-center text-primary dark:text-white mt-28">Portfolio</h1>
-        <ul className="flex justify-center mt-20">
-          <li className="px-6 text-base text-center "><Link href="#"><a className="text-primary dark:text-white">前端</a></Link></li>
-          <li className="px-6 text-base text-center border-primary dark:border-white border-x-2"><Link href="#"><a className="text-primary dark:text-white opacity-40">後端</a></Link></li>
-          <li className="px-6 text-base topacity-40 ext-center"><Link href="#"><a className="text-primary dark:text-white opacity-40">其他</a></Link></li>
-        </ul>
+        <Tags tags={tags} queryTag={queryTag}/>
         <div className="mt-12 gap-9 grid grid-cols-3">
-            {portfolioData.map(project => <ProjectCard projectProps={project}/>)}
+          {portfolioData.filter(project => project.tag == queryTag).map(project => <Card projectProps={project}/>)}
         </div>
       </div>
     </Layout>
