@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: 'class',
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -14,6 +15,7 @@ module.exports = {
         current: 'currentColor',
         'primary': '#0A253E',
         'secondary': '#F67024',
+        'light': "#EDEDED",
         'white': '#ffffff',
         'purple': '#3f3cbb',
         'midnight': '#121063',
