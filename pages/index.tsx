@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Layout from '../components/layout'
+import Timer from '../components/timer'
 import utilStyles from  '../styles/utils.module.css'
 
 export const name = "張哲瑋"
@@ -17,10 +18,11 @@ export default function Home():React.ReactElement {
             width={144}
             alt={name}
           />
-          <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          <h1 className={utilStyles.headingXl}>{id}</h1>
+          <h1 className={`${utilStyles.heading2Xl} dark:text-white`}>{name}</h1>
+          <h2 className={`${utilStyles.headingXl} dark:text-white`}>{id}</h2>
         </header>
       </div>
+      <Timer />
     </Layout>
   )
 }
