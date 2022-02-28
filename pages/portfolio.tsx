@@ -9,8 +9,7 @@ import { useRouter } from 'next/router'
 
 export default function Portfolio({portfolioData}:{portfolioData:ProjectProps[]}): React.ReactElement {
   const tags = Array.from(new Set(portfolioData.map(project => project.tag)));
-  const router = useRouter();
-  const queryTag = router.query.tag || tags[0];
+  const queryTag = getQueryTag() || tags[0];
 
   return (
     <Layout>
@@ -33,4 +32,14 @@ export const getStaticProps: GetStaticProps = async () => {
       portfolioData
     }
   }
+}
+
+function getQueryTag() {
+  const router = useRouter();
+  const query = router.query.tag;
+  if (query){
+    if (Array.isArray(query)) return query[0];
+    return query
+  }
+  return null;
 }
