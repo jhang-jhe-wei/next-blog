@@ -1,8 +1,8 @@
 import { ProjectProps } from "../../interfaces/portfolio_interface"
 export default function Card({projectProps}:{projectProps: ProjectProps}) {
   return(
-    <div className="mb-12 bg-white font-notosans">
-      <img className="" src={projectProps.image} alt="Sunset in the mountains"/>
+    <div className="max-w-sm bg-white font-notosans">
+      <img className="w-full" src={projectProps.image} alt="Sunset in the mountains"/>
       <div className="mx-6 mt-5 text-base ">
         <h2 className="font-bold text-secondary">{projectProps.title}</h2>
         <p className="mt-5 text-zinc-700">{projectProps.description}</p>
