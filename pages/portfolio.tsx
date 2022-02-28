@@ -18,6 +18,7 @@ export default function Portfolio({portfolioData}:{portfolioData:ProjectProps[]}
         <h1 className="text-5xl text-center text-primary dark:text-white mt-28">Portfolio</h1>
         <Tags tags={tags} queryTag={queryTag}/>
         <div className="mt-12 gap-9 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+          {portfolioData.filter(project => project.tag == queryTag).map(project => <Card key={project.title} projectProps={project}/>)}
         </div>
       </div>
     </Layout>
