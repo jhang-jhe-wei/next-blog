@@ -14,11 +14,10 @@ export default function Portfolio({portfolioData}:{portfolioData:ProjectProps[]}
   return (
     <Layout>
       <Head><title>portfolio</title></Head>
-      <div className="container mx-auto">
+      <div className="max-w-sm mx-auto md:max-w-3xl xl:max-w-6xl">
         <h1 className="text-5xl text-center text-primary dark:text-white mt-28">Portfolio</h1>
         <Tags tags={tags} queryTag={queryTag}/>
-        <div className="mt-12 gap-9 grid grid-cols-3">
-          {portfolioData.filter(project => project.tag == queryTag).map(project => <Card projectProps={project}/>)}
+        <div className="mt-12 gap-9 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         </div>
       </div>
     </Layout>
