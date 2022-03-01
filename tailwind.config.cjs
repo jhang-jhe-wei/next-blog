@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      flex: {
+        '2': '2 2 0%'
+      },
       fontFamily: {
         nobile: ["Nobile", "sans-serif"],
         notosans: ["Noto Sans TC", "sans-serif"]
@@ -24,6 +27,7 @@ module.exports = {
         'silver': '#ecebff',
         'bubble-gum': '#ff77e9',
         'bermuda': '#78dcca',
+        'cyan-450': '#39AFC9',
       },
     },
   },
