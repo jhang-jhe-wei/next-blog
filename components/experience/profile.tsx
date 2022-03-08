@@ -1,5 +1,7 @@
 import Image from "next/image"
 import SocialMediaList from "./social_media_list"
+import profileImg from '../../public/images/profile.png'
+
 export default function profoilo():React.ReactElement {
   const highlights = {
     "獲得獎牌數": 20,
@@ -11,7 +13,7 @@ export default function profoilo():React.ReactElement {
       <Image
         priority
         className="align-middle"
-        src="/images/profile.png"
+        src={profileImg}
         height={332}
         width={326}
       />
