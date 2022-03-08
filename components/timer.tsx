@@ -6,13 +6,13 @@ export default function Timer():React.ReactElement {
   useEffect(()=>{
     if (state == 1) {
       const interval = setInterval(()=>{
-        setSecond(second + 1)
+        setSecond(sec => sec + 1)
       }, 1000);
       return ()=>{
         clearInterval(interval);
       }
     }
-  })
+  }, [state])
   return (
     <div>
       <div className="container flex justify-center mx-auto">
