@@ -6,19 +6,25 @@ export interface ListItemProps {
   highlights: string[];
 }
 
-export interface AchievementItemProps {
-  title: string;
-  is_full: boolean;
-  highlights: string[];
-}
-
 export interface ListProps {
   category: string;
   backgroundText: string;
   data: ListItemProps[];
 }
 
-
 export interface AchievementProps {
-  data: AchievementItemProps[];
+  title: string;
+  is_full: boolean;
+  highlights: string[];
+}
+
+export interface AchievementsProps {
+  data: AchievementProps[];
+}
+
+export interface SkillProps {
+  name: string;
+  precision: number;
+}
+
 }

@@ -4,15 +4,15 @@ import Toc from '../components/about/toc'
 import Profile from '../components/about/profile'
 import List from '../components/about/List'
 import Layout from '../components/layout'
-import Achievement from '../components/about/achievement'
+import Achievements from '../components/about/achievements'
 import Footer from '../components/about/footer'
 import { getAboutData } from '../lib/about'
-import { AchievementItemProps, ListItemProps } from '../interfaces/about_interface'
+import { AchievementProps, ListItemProps } from '../interfaces/about_interface'
 
 interface AboutData {
     education: ListItemProps[];
     work: ListItemProps[];
-    achievement: AchievementItemProps[];
+    achievement: AchievementProps[];
 }
 
 export default function about({aboutData}:{aboutData:AboutData}): React.ReactElement{
@@ -28,7 +28,7 @@ export default function about({aboutData}:{aboutData:AboutData}): React.ReactEle
           <List category="工作經驗" backgroundText="Work Experience" data={aboutData.work} />
         </div>
       </div>
-      <Achievement data={aboutData.achievement}/>
+      <Achievements data={aboutData.achievement}/>
       <Footer/>
     </Layout>
   )
