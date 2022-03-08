@@ -11,7 +11,7 @@ export default function Nav():React.ReactElement{
         </Link>
         <ul className="flex items-center justify-between">
           <NavItem href="/portfolio">作品集</NavItem>
-          <NavItem href="/experience">經歷</NavItem>
+          <NavItem href="/about">經歷</NavItem>
           <NavItem href="https://blog.wells.tw">部落格</NavItem>
           <NavBtnItem href="#">聯絡我</NavBtnItem>
           <NavIconItem/>

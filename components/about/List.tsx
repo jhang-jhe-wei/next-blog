@@ -1,4 +1,4 @@
-import { ListProps } from "../../interfaces/experience_interface"
+import { ListProps } from "../../interfaces/about_interface"
 export default function List(ListProps:ListProps):React.ReactElement {
   return (
     <div className="flex">
@@ -11,7 +11,7 @@ export default function List(ListProps:ListProps):React.ReactElement {
         ))}
       </h2>
       <h2 className="z-10 flex-1 text-3xl border-r-2 border-gray-300 text-secondary">{ListProps.category}</h2>
-      <ul className="z-20 pb-56 list-disc list-inside flex-2">
+      <ul className="z-20 pb-32 list-disc list-inside flex-2">
         {
           ListProps.data.map(item => (
             <li key={item.title} className="mb-16 text-4xl text-gray-400 -translate-x-1.5">

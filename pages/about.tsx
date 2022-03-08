@@ -1,12 +1,12 @@
 import Head from 'next/head'
-import Toc from '../components/experience/toc'
-import Profile from '../components/experience/profile'
-import List from '../components/experience/List'
+import Toc from '../components/about/toc'
+import Profile from '../components/about/profile'
+import List from '../components/about/List'
 import Layout from '../components/layout'
-import Achievement from '../components/experience/achievement'
-import Footer from '../components/experience/footer'
+import Achievement from '../components/about/achievement'
+import Footer from '../components/about/footer'
 
-export default function Experience(): React.ReactElement{
+export default function about(): React.ReactElement{
   const educationData = [{
     title: "臺灣科技大學",
     subTitle: "應用科技學士學位學程",
@@ -104,7 +104,7 @@ export default function Experience(): React.ReactElement{
     <Layout>
       <div className="max-w-sm mx-auto md:max-w-5xl">
         <Head><title>Wells 的經歷</title></Head>
-        <h1 className="mt-32 text-5xl text-center">EXPERIENCE</h1>
+        <h1 className="mt-32 text-5xl text-center">About</h1>
         <Toc/>
         <Profile/>
         <div className="mt-56">

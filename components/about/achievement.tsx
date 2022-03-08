@@ -1,4 +1,4 @@
-import { AchievementProps } from "../../interfaces/experience_interface"
+import { AchievementProps } from "../../interfaces/about_interface"
 export default function Achievement(achievementProps:AchievementProps):React.ReactElement {
   return (
     <div className="w-full text-nobile bg-gradient-to-r from-white to-light -translate-y-10">
