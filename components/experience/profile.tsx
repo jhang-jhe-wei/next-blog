@@ -1,5 +1,5 @@
 import Image from "next/image"
-import SocialMediaList from "./social_media_list"
+import SocialMediaList from "../social_media_list/social_media_list"
 import profileImg from '../../public/images/profile.png'
 
 export default function profoilo():React.ReactElement {
