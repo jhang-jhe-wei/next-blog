@@ -3,12 +3,16 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import Card from '../components/portfolio/card'
 import Tags from '../components/portfolio/tags'
-import { ProjectProps } from '../interfaces/portfolio_interface'
+import { ProjectProps as Project } from '../interfaces/portfolio_interface'
 import { getPortfolioData } from '../lib/portfolio'
 import { useRouter } from 'next/router'
 
-export default function Portfolio({portfolioData}:{portfolioData:ProjectProps[]}): React.ReactElement {
-  const tags = Array.from(new Set(portfolioData.map(project => project.tag)));
+interface ProfolioData {
+  projects: Project[];
+  tags: string[];
+}
+
+export default function Portfolio({projects, tags}: ProfolioData): React.ReactElement {
   const queryTag = getQueryTag() || tags[0];
 
   return (
@@ -18,7 +22,7 @@ export default function Portfolio({portfolioData}:{portfolioData:ProjectProps[]}
         <h1 className="text-5xl text-center text-primary dark:text-white mt-28">Portfolio</h1>
         <Tags tags={tags} queryTag={queryTag}/>
         <div className="mt-12 gap-9 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-          {portfolioData.filter(project => project.tag == queryTag).map(project => <Card key={project.title} projectProps={project}/>)}
+          {projects.filter(project => project.tag == queryTag).map(project => <Card key={project.title} project={project}/>)}
         </div>
       </div>
     </Layout>
@@ -26,10 +30,12 @@ export default function Portfolio({portfolioData}:{portfolioData:ProjectProps[]}
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const portfolioData = await getPortfolioData()
+  const projects: Project[] = await getPortfolioData()
+  const tags = Array.from(new Set(projects.map(project => project.tag)));
   return {
     props: {
-      portfolioData
+      projects,
+      tags
     }
   }
 }
