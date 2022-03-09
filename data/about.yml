@@ -113,3 +113,55 @@ achievement:
       - "受邀至第48屆全國技能競賽北區分區賽解說室內配線 / 2019.04"
       - "受邀至第47屆全國技能競賽解說室內配線 / 2018.08"
       - "受邀至第47屆全國技能競賽北區分區賽解說室內配線 / 2018.04"
+
+skillsList:
+    -
+      title: 網站前端
+      skills:
+        -
+          name: HTML
+          proficiency: 50
+        -
+          name: CSS
+          proficiency: 70
+        -
+          name: CSS
+          proficiency: 80
+    -
+      title: 網站後端
+      skills:
+        -
+          name: Ruby on Rails
+          proficiency: 80
+        -
+          name: Bash
+          proficiency: 70
+        -
+          name: PostgreSQL
+          proficiency: 80
+    -
+      title: DSL
+      skills:
+        -
+          name: Sketchup Ruby API
+          proficiency: 50
+        -
+          name: PLC
+          proficiency: 70
+        -
+          name: KNX
+          proficiency: 80
+    -
+      title: Devops
+      skills:
+        -
+          name: Nginx
+          proficiency: 50
+        -
+          name: Git
+          proficiency: 70
+        -
+          name: Docker
+          proficiency: 30
+
+

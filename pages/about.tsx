@@ -7,12 +7,15 @@ import Layout from '../components/layout'
 import Achievements from '../components/about/achievements'
 import Footer from '../components/about/footer'
 import { getAboutData } from '../lib/about'
-import { AchievementProps, ListItemProps } from '../interfaces/about_interface'
+import { SkillsProps, AchievementProps, ListItemProps } from '../interfaces/about_interface'
+import SkillsList from '../components/about/skills_list'
+import ResumeBtn from '../components/about/resume_btn'
 
 interface AboutData {
     education: ListItemProps[];
     work: ListItemProps[];
     achievement: AchievementProps[];
+    skillsList: SkillsProps[];
 }
 
 export default function about({aboutData}:{aboutData:AboutData}): React.ReactElement{
@@ -29,6 +32,10 @@ export default function about({aboutData}:{aboutData:AboutData}): React.ReactEle
         </div>
       </div>
       <Achievements data={aboutData.achievement}/>
+      <div className="max-w-sm mx-auto md:max-w-5xl">
+        <SkillsList data={aboutData.skillsList}/>
+      </div>
+      <ResumeBtn/>
       <Footer/>
     </Layout>
   )

@@ -24,7 +24,16 @@ export interface AchievementsProps {
 
 export interface SkillProps {
   name: string;
-  precision: number;
+  proficiency: number;
 }
 
+export interface SkillsProps {
+  title: string;
+  skills: SkillProps[];
 }
+
+export interface SkillsListProps {
+  data: SkillsProps[];
+}
+
+
