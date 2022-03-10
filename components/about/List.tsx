@@ -10,7 +10,7 @@ export default function List(ListProps:ListProps):React.ReactElement {
           </span>
         ))}
       </h2>
-      <h2 className="z-10 flex-1 text-3xl border-r-2 border-gray-300 text-secondary">{ListProps.category}</h2>
+      <h2 className="z-10 flex-1 text-3xl border-r-2 border-gray-400 text-secondary">{ListProps.category}</h2>
       <ul className="z-20 pb-32 list-disc list-inside flex-2">
         {
           ListProps.data.map(item => (
@@ -28,7 +28,7 @@ export default function List(ListProps:ListProps):React.ReactElement {
                   {item.subTitle}
                 </span>
               </h3>
-              <ul className="mt-8 text-lg list-disc list-outside ml-28 text-primary">
+              <ul className="mt-8 text-lg list-disc list-outside ml-28 dark:text-light text-primary">
                 {item.highlights.map(highlight => (
                   <li key={highlight}>{highlight}</li>
                 ))}

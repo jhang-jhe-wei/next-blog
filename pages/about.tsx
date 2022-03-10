@@ -23,7 +23,7 @@ export default function about({aboutData}:{aboutData:AboutData}): React.ReactEle
     <Layout>
       <div className="max-w-sm mx-auto md:max-w-5xl">
         <Head><title>Wells 的經歷</title></Head>
-        <h1 className="mt-32 text-5xl text-center">About</h1>
+        <h1 className="mt-32 text-5xl text-center text-primary dark:text-light">About</h1>
         <Toc/>
         <Profile/>
         <div className="mt-56">

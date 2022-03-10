@@ -17,7 +17,7 @@ export default function profoilo():React.ReactElement {
         height={332}
         width={326}
       />
-      <div className="flex flex-col justify-between ml-20 text-primary font-notosans">
+      <div className="flex flex-col justify-between ml-20 text-primary dark:text-light font-notosans">
         <div>
           <div className="flex items-center justify-between">
             <h2 className="text-5xl font-bold">張哲瑋</h2>
@@ -33,7 +33,7 @@ export default function profoilo():React.ReactElement {
             {Object.keys(highlights).map(key => (
               <li key={key} className="mr-16 text-6xl font-bold text-secondary">
                 {highlights[key]}
-                <h3 className="text-xs text-center text-primary">{key}</h3>
+                <h3 className="text-xs text-center dark:text-light text-primary">{key}</h3>
               </li>
             ))}
           </ul>
