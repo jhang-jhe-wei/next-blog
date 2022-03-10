@@ -9,6 +9,7 @@ export interface ListItemProps {
 export interface ListProps {
   category: string;
   backgroundText: string;
+  id: string;
   data: ListItemProps[];
 }
 

@@ -27,8 +27,8 @@ export default function about({aboutData}:{aboutData:AboutData}): React.ReactEle
         <Toc/>
         <Profile/>
         <div className="mt-56">
-          <List category="教育背景" backgroundText="Education Background" data={aboutData.education} />
-          <List category="工作經驗" backgroundText="Work Experience" data={aboutData.work} />
+          <List id="education" category="教育背景" backgroundText="Education Background" data={aboutData.education} />
+          <List id="work" category="工作經驗" backgroundText="Work Experience" data={aboutData.work} />
         </div>
       </div>
       <Achievements data={aboutData.achievement}/>

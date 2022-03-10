@@ -1,7 +1,7 @@
 import { SkillsListProps } from "../../interfaces/about_interface"
 export default function SkillsList({ data }:SkillsListProps):React.ReactElement {
   return (
-    <div className="mt-32">
+    <div id="skills" className="mt-32">
       <h2 className="text-center text-white font-notosans shadow-gray-700 text-7xl">
         Skills
       </h2>

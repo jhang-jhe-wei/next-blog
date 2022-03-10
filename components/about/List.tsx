@@ -1,19 +1,19 @@
 import { ListProps } from "../../interfaces/about_interface"
-export default function List(ListProps:ListProps):React.ReactElement {
+export default function List(listProps:ListProps):React.ReactElement {
   return (
-    <div className="flex">
+    <div className="flex" id={listProps.id}>
       <h2 className="absolute text-white font-notosans shadow-gray-700 rotate-90 origin-top-left text-7xl">
-        {ListProps.backgroundText.split(" ").map(text=>(
+        {listProps.backgroundText.split(" ").map(text=>(
           <span key={text}>
             {text}
             <br/>
           </span>
         ))}
       </h2>
-      <h2 className="z-10 flex-1 text-3xl border-r-2 border-gray-400 text-secondary">{ListProps.category}</h2>
+      <h2 className="z-10 flex-1 text-3xl border-r-2 border-gray-400 text-secondary">{listProps.category}</h2>
       <ul className="z-20 pb-32 list-disc list-inside flex-2">
         {
-          ListProps.data.map(item => (
+          listProps.data.map(item => (
             <li key={item.title} className="mb-16 text-4xl text-gray-400 -translate-x-1.5">
               <p className="absolute inline-block w-20 text-base text-right -translate-x-48 translate-y-1">
                 {item.started_at}

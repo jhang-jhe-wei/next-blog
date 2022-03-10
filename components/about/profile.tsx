@@ -9,7 +9,7 @@ export default function profoilo():React.ReactElement {
     "合作客戶數": 10
   }
   return (
-    <div className="flex mt-36">
+    <div id="profile" className="flex mt-36">
       <Image
         priority
         className="align-middle"
