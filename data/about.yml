@@ -125,7 +125,7 @@ skillsList:
           name: CSS
           proficiency: 70
         -
-          name: CSS
+          name: Javascript
           proficiency: 80
     -
       title: 網站後端
