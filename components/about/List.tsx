@@ -16,11 +16,11 @@ export default function List(listProps:ListProps):React.ReactElement {
           listProps.data.map(item => (
             <li key={item.title} className="mb-16 text-4xl text-gray-400 -translate-x-1.5">
               <p className="absolute inline-block w-20 text-base text-right -translate-x-48 translate-y-1">
-                {item.started_at}
+                {item.startedAt}
                 <br/>
                 ~
                 <br/>
-                {item.ended_at}
+                {item.endedAt}
               </p>
               <h3 className="inline ml-10 text-2xl font-bold align-middle text-cyan-450">
                 {item.title}．

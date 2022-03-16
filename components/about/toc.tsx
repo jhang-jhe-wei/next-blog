@@ -1,6 +1,6 @@
 export default function Toc():React.ReactElement {
   const tags = ["關於我", "教育背景", "工作經驗", "獲獎與成就", "技能專長"]
-  const anchors = ["profile", "education", "work", "achievements", "skills"]
+  const anchors = ["profile", "education", "works", "achievements", "skills"]
   return (
     <ul className="flex justify-center mt-20">
     { tags.map((tag, index) =>

@@ -1,8 +1,8 @@
 export interface ListItemProps {
   title: string;
   subTitle: string;
-  started_at: string;
-  ended_at: string;
+  startedAt: string;
+  endedAt: string;
   highlights: string[];
 }
 
@@ -15,7 +15,7 @@ export interface ListProps {
 
 export interface AchievementProps {
   title: string;
-  is_full: boolean;
+  isFull: boolean;
   highlights: string[];
 }
 

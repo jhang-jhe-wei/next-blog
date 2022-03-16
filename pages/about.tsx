@@ -13,8 +13,8 @@ import ResumeBtn from '../components/about/resume_btn'
 
 interface AboutData {
     education: ListItemProps[];
-    work: ListItemProps[];
-    achievement: AchievementProps[];
+    works: ListItemProps[];
+    achievements: AchievementProps[];
     skillsList: SkillsProps[];
 }
 
@@ -28,10 +28,10 @@ export default function about({aboutData}:{aboutData:AboutData}): React.ReactEle
         <Profile/>
         <div className="mt-56">
           <List id="education" category="教育背景" backgroundText="Education Background" data={aboutData.education} />
-          <List id="work" category="工作經驗" backgroundText="Work Experience" data={aboutData.work} />
+          <List id="works" category="工作經驗" backgroundText="Work Experience" data={aboutData.works} />
         </div>
       </div>
-      <Achievements data={aboutData.achievement}/>
+      <Achievements data={aboutData.achievements}/>
       <div className="max-w-sm mx-auto md:max-w-5xl">
         <SkillsList data={aboutData.skillsList}/>
       </div>
