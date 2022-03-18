@@ -9,7 +9,7 @@ import Footer from '../components/about/footer'
 import { getAboutData } from '../lib/about'
 import { SkillsProps, AchievementProps, ListItemProps } from '../interfaces/about_interface'
 import SkillsList from '../components/about/skills_list'
-import ResumeBtn from '../components/about/resume_btn'
+import Resume from '../components/about/resume'
 
 interface AboutData {
     education: ListItemProps[];
@@ -35,7 +35,7 @@ export default function about({aboutData}:{aboutData:AboutData}): React.ReactEle
       <div className="max-w-sm mx-auto md:max-w-5xl">
         <SkillsList data={aboutData.skillsList}/>
       </div>
-      <ResumeBtn/>
+      <Resume/>
       <Footer/>
     </Layout>
   )
