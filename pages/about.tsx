@@ -11,14 +11,14 @@ import { SkillsProps, AchievementProps, ListItemProps } from '../interfaces/abou
 import SkillsList from '../components/about/skills_list'
 import Resume from '../components/about/resume'
 
-interface AboutData {
+interface AboutProps {
     education: ListItemProps[];
     works: ListItemProps[];
     achievements: AchievementProps[];
     skillsList: SkillsProps[];
 }
 
-export default function about({aboutData}:{aboutData:AboutData}): React.ReactElement{
+export default function about({education, works, achievements, skillsList}:AboutProps): React.ReactElement{
   return (
     <Layout>
       <div className="max-w-sm mx-auto md:max-w-5xl">
@@ -27,13 +27,13 @@ export default function about({aboutData}:{aboutData:AboutData}): React.ReactEle
         <Toc/>
         <Profile/>
         <div className="mt-56">
-          <List id="education" category="教育背景" backgroundText="Education Background" data={aboutData.education} />
-          <List id="works" category="工作經驗" backgroundText="Work Experience" data={aboutData.works} />
+          <List id="education" category="教育背景" backgroundText="Education Background" data={education} />
+          <List id="works" category="工作經驗" backgroundText="Work Experience" data={works} />
         </div>
       </div>
-      <Achievements data={aboutData.achievements}/>
+      <Achievements data={achievements}/>
       <div className="max-w-sm mx-auto md:max-w-5xl">
-        <SkillsList data={aboutData.skillsList}/>
+        <SkillsList data={skillsList}/>
       </div>
       <Resume/>
       <Footer/>
@@ -41,11 +41,11 @@ export default function about({aboutData}:{aboutData:AboutData}): React.ReactEle
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<AboutProps> = async () => {
   const aboutData = await getAboutData();
   return {
     props: {
-      aboutData
+      ...aboutData
     }
   }
 }
