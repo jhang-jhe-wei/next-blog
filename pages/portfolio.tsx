@@ -7,12 +7,12 @@ import { ProjectProps as Project } from '../interfaces/portfolio_interface'
 import { getPortfolioData } from '../lib/portfolio'
 import { useRouter } from 'next/router'
 
-interface ProfolioData {
+interface PortfolioProps {
   projects: Project[];
   tags: string[];
 }
 
-export default function Portfolio({projects, tags}: ProfolioData): React.ReactElement {
+export default function Portfolio({projects, tags}: PortfolioProps): React.ReactElement {
   const queryTag = getQueryTag() || tags[0];
 
   return (
@@ -29,7 +29,7 @@ export default function Portfolio({projects, tags}: ProfolioData): React.ReactEl
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<PortfolioProps> = async () => {
   const projects: Project[] = await getPortfolioData()
   const tags = Array.from(new Set(projects.map(project => project.tag)));
   return {
