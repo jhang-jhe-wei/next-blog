@@ -9,7 +9,7 @@ export default function SkillsList({ data }:SkillsListProps):React.ReactElement 
       <ul className="mt-10 grid grid-cols-11 gap-8">
         {
           data.map((skills, index)=> (
-            <li key={skills.title} className={`py-9 px-10 bg-white dark:bg-opacity-10 ${(index % 3 == 0)? "col-span-5": "col-span-6"}`}>
+            <li key={skills.title} className={`py-9 px-10 bg-white dark:bg-opacity-10 ${(index % 4 % 3 == 0)? "col-span-5": "col-span-6"}`}>
               <h3 className="text-2xl font-bold text-cyan-450">{skills.title}</h3>
               <div className="flex mt-5">
                 <ul className="mt-5">
