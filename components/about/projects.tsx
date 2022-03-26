@@ -1,0 +1,22 @@
+import { ProjectProps} from '../../interfaces/portfolio_interface'
+import Project from './project'
+interface ProjectsProps {
+  projects: ProjectProps[];
+}
+
+export default function Projects({projects}: ProjectsProps) {
+  return (
+    <div className="mt-40">
+      <h2 className="text-center text-white font-notosans shadow-gray-700 text-7xl">Projects</h2>
+      <h2 className="mt-5 text-3xl text-center text-secondary">專案</h2>
+      <ul className="mt-10">
+        {
+          projects.filter(project => project.highlight).map((project, index) => <Project key={project.title} project={project} index={index}/>)
+        }
+      </ul>
+      <div className="text-center border-b border-gray-400 dark:border-white">
+        <a href="/portfolio" className="inline-block pt-3 pb-2 pl-3 pr-2 text-gray-400 border border-gray-400 dark:bg-primary dark:text-white bg-light translate-y-1/2">SHOW MORE &gt;</a>
+      </div>
+    </div>
+  )
+}

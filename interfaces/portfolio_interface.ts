@@ -5,5 +5,6 @@ export interface ProjectProps {
   description: string;
   demo_link: string;
   code_link: string;
+  highlight?: boolean;
 }
 

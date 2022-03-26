@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import YAML from 'yaml'
-import { assert, object, string, array } from 'superstruct'
+import { boolean, optional, assert, object, string, array } from 'superstruct'
 
 const filePath = path.join(process.cwd(), 'data', 'portfolio.yml')
 const PortfolioModel = array(object({
@@ -10,7 +10,8 @@ const PortfolioModel = array(object({
   image: string(),
   description: string(),
   demo_link: string(),
-  code_link: string()
+  code_link: string(),
+  highlight: optional(boolean())
 }))
 
 export async function getPortfolioData() {

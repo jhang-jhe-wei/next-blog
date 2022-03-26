@@ -9,16 +9,20 @@ import Footer from '../components/about/footer'
 import { getAboutData } from '../lib/about'
 import { SkillsProps, AchievementProps, ListItemProps } from '../interfaces/about_interface'
 import SkillsList from '../components/about/skills_list'
+import Projects from '../components/about/projects'
 import Resume from '../components/about/resume'
+import { getPortfolioData } from '../lib/portfolio'
+import { ProjectProps} from '../interfaces/portfolio_interface'
 
 interface AboutProps {
     education: ListItemProps[];
     works: ListItemProps[];
     achievements: AchievementProps[];
     skillsList: SkillsProps[];
+    projects: ProjectProps[];
 }
 
-export default function about({education, works, achievements, skillsList}:AboutProps): React.ReactElement{
+export default function about({education, works, achievements, skillsList, projects}:AboutProps): React.ReactElement{
   return (
     <Layout>
       <div className="max-w-sm mx-auto md:max-w-5xl">
@@ -34,6 +38,7 @@ export default function about({education, works, achievements, skillsList}:About
       <Achievements data={achievements}/>
       <div className="max-w-sm mx-auto md:max-w-5xl">
         <SkillsList data={skillsList}/>
+        <Projects projects={projects}/>
       </div>
       <Resume/>
       <Footer/>
@@ -43,9 +48,11 @@ export default function about({education, works, achievements, skillsList}:About
 
 export const getStaticProps: GetStaticProps<AboutProps> = async () => {
   const aboutData = await getAboutData();
+  const projects: ProjectProps[] = await getPortfolioData()
   return {
     props: {
-      ...aboutData
+      ...aboutData,
+      projects
     }
   }
 }
