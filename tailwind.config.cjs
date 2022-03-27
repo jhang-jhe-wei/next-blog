@@ -21,6 +21,7 @@ module.exports = {
         transparent: 'transparent',
         current: 'currentColor',
         'primary': '#0A253E',
+        'primary-opacity': '#243B52',
         'secondary': '#F67024',
         'light': "#EDEDED",
         'white': '#ffffff',
@@ -32,6 +33,9 @@ module.exports = {
         'bubble-gum': '#ff77e9',
         'bermuda': '#78dcca',
         'cyan-450': '#39AFC9',
+      },
+      transitionProperty: {
+        'opacity-and-transform': 'opacity, transform'
       },
     },
   },

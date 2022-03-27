@@ -19,7 +19,7 @@ export default function SkillsListItem({ skills, index }:SkillsListItemProps){
   }, [reveal])
 
   return (
-    <li ref={element} className={`py-9 px-10 bg-white dark:bg-opacity-10 transition-all duration-500 ${reveal? 'opacity-100' : 'translate-y-20 opacity-0'} ${(index % 4 % 3 == 0)? "col-span-5": "col-span-6"}`}>
+    <li ref={element} className={`py-9 px-10 bg-white dark:bg-primary-opacity transition-opacity-and-transform duration-500 ${reveal? 'opacity-100' : 'translate-y-20 opacity-0'} ${(index % 4 % 3 == 0)? "col-span-5": "col-span-6"}`}>
       <h3 className="text-2xl font-bold text-cyan-450">{skills.title}</h3>
       <div className="flex mt-5">
         <ul className="mt-5">

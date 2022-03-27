@@ -19,8 +19,8 @@ export default function Project({project, index}: ProjectComponentProps) {
   }, [reveal])
 
   return (
-    <li ref={element} className={`bg-white dark:bg-opacity-10 flex mb-10 transition-all duration-500 ${reveal? 'opacity-100' : 'translate-y-20 opacity-0'} ${index % 2 == 0? "": "flex-row-reverse"}`}>
-      <img className="max-w-xs bg-white max-h-72 dark:bg-opacity-10" src={project.image} alt=""/>
+    <li ref={element} className={`bg-white dark:bg-primary-opacity flex mb-10 transition-opacity-and-transform duration-500 ${reveal? 'opacity-100' : 'translate-y-20 opacity-0'} ${index % 2 == 0? "": "flex-row-reverse"}`}>
+      <img className="max-w-xs bg-white max-h-72" src={project.image} alt=""/>
       <div className="flex flex-col justify-between px-12 py-7">
         <div>
           <h3 className="text-xl text-secondary">{project.title}</h3>
