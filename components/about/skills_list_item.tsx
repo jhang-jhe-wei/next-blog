@@ -1,22 +1,11 @@
 import { SkillsProps } from '../../interfaces/about_interface'
-import { useState, useEffect, useRef } from "react"
+import useReveal from "../../lib/use_reveal"
 interface SkillsListItemProps {
   skills: SkillsProps,
   index: number
 }
 export default function SkillsListItem({ skills, index }:SkillsListItemProps){
-  const [reveal, setReveal] = useState(false)
-  const element = useRef(null)
-  useEffect(()=>{
-    if(reveal) return;
-    const scrollEventHandler = () => {
-      if((window.scrollY + window.innerHeight / 4 * 3) > element.current.offsetTop){
-        setReveal(true);
-      }
-    }
-    document.addEventListener('scroll', scrollEventHandler)
-    return () => {document.removeEventListener('scroll', scrollEventHandler)}
-  }, [reveal])
+  const [element, reveal] = useReveal()
 
   return (
     <li ref={element} className={`py-9 px-10 bg-white dark:bg-primary-opacity transition-opacity-and-transform duration-500 ${reveal? 'opacity-100' : 'translate-y-20 opacity-0'} ${(index % 4 % 3 == 0)? "col-span-5": "col-span-6"}`}>

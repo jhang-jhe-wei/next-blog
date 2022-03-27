@@ -1,18 +1,7 @@
 import { AchievementProps } from "../../interfaces/about_interface"
-import { useState, useEffect, useRef } from "react"
+import useReveal from "../../lib/use_reveal"
 export default function Achievement({item}:{item: AchievementProps}) {
-  const [reveal, setReveal] = useState(false)
-  const element = useRef(null)
-  useEffect(()=>{
-    if(reveal) return;
-    const scrollEventHandler = () => {
-      if((window.scrollY + window.innerHeight / 4 * 3) > (element.current.offsetTop + element.current.offsetParent.offsetParent.offsetTop)){
-        setReveal(true);
-      }
-    }
-    document.addEventListener('scroll', scrollEventHandler)
-    return () => {document.removeEventListener('scroll', scrollEventHandler)}
-  }, [reveal])
+  const [element, reveal] = useReveal()
 
   return (
     <li ref={element} className={`transition-all duration-500 ${reveal? 'opacity-100' : 'translate-y-20 opacity-0'}`}>

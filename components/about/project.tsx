@@ -1,22 +1,11 @@
 import { ProjectProps } from "../../interfaces/portfolio_interface"
-import { useState, useEffect, useRef } from "react"
+import useReveal from "../../lib/use_reveal"
 interface ProjectComponentProps {
   project: ProjectProps;
   index: number;
 }
 export default function Project({project, index}: ProjectComponentProps) {
-  const [reveal, setReveal] = useState(false)
-  const element = useRef(null)
-  useEffect(()=>{
-    if(reveal) return;
-    const scrollEventHandler = () => {
-      if((window.scrollY + window.innerHeight / 4 * 3) > element.current.offsetTop){
-        setReveal(true);
-      }
-    }
-    document.addEventListener('scroll', scrollEventHandler)
-    return () => {document.removeEventListener('scroll', scrollEventHandler)}
-  }, [reveal])
+  const [element, reveal] = useReveal()
 
   return (
     <li ref={element} className={`bg-white dark:bg-primary-opacity flex mb-10 transition-opacity-and-transform duration-500 ${reveal? 'opacity-100' : 'translate-y-20 opacity-0'} ${index % 2 == 0? "": "flex-row-reverse"}`}>
