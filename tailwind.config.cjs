@@ -1,10 +1,16 @@
 module.exports = {
   darkMode: 'class',
+  corePlugins: {
+    container: false
+  },
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       margin: {
         '6.5': '26px',
@@ -39,5 +45,19 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '.container': {
+          maxWidth: '100%',
+          '@screen md': {
+            maxWidth: '614px',
+          },
+          '@screen xl': {
+            maxWidth: '1024px',
+          },
+        }
+      })
+    }
+  ]
 }

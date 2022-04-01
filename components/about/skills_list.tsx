@@ -3,7 +3,7 @@ import SkillsListItem from "./skills_list_item"
 export default function SkillsList({ data }:SkillsListProps):React.ReactElement {
   return (
     <div id="skills" className="mt-32">
-      <h2 className="text-center text-white font-notosans shadow-gray-700 text-7xl">
+      <h2 className="text-4xl text-center text-white font-notosans shadow-gray-700 xl:text-7xl">
         Skills
       </h2>
       <h2 className="mt-2 text-3xl text-center text-secondary">技能專長</h2>

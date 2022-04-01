@@ -18,7 +18,7 @@ export default function Portfolio({projects, tags}: PortfolioProps): React.React
   return (
     <Layout>
       <Head><title>portfolio</title></Head>
-      <div className="max-w-sm mx-auto md:max-w-3xl xl:max-w-6xl">
+      <div className="container mx-auto">
         <h1 className="text-5xl text-center text-primary dark:text-white mt-28">Portfolio</h1>
         <Tags tags={tags} queryTag={queryTag}/>
         <div className="pb-20 mt-12 gap-9 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">

@@ -4,7 +4,7 @@ export default function Card({project}:{project: Project}) {
   const [element, reveal] = useReveal()
 
   return(
-    <div ref={element} className={`max-w-sm bg-white font-notosans transition-all duration-500 ${reveal? 'opacity-100' : 'translate-y-20 opacity-0'}`}>
+    <div ref={element} className={`max-w-md bg-white font-notosans transition-all duration-500 ${reveal? 'opacity-100' : 'translate-y-20 opacity-0'}`}>
       <img className="w-full" src={project.image} alt="Sunset in the mountains"/>
       <div className="mx-6 mt-5 text-lg">
         <h2 className="font-bold text-secondary">{project.title}</h2>

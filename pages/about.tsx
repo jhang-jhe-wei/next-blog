@@ -25,7 +25,7 @@ interface AboutProps {
 export default function about({education, works, achievements, skillsList, projects}:AboutProps): React.ReactElement{
   return (
     <Layout>
-      <div className="max-w-sm mx-auto md:max-w-5xl">
+      <div className="container mx-auto">
         <Head><title>Wells 的經歷</title></Head>
         <h1 className="mt-32 text-5xl text-center text-primary dark:text-light">About</h1>
         <Toc/>
@@ -36,7 +36,7 @@ export default function about({education, works, achievements, skillsList, proje
         </div>
       </div>
       <Achievements data={achievements}/>
-      <div className="max-w-sm mx-auto md:max-w-5xl">
+      <div className="container mx-auto">
         <SkillsList data={skillsList}/>
         <Projects projects={projects}/>
       </div>

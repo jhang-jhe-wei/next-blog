@@ -13,7 +13,7 @@ export default function Nav():React.ReactElement{
       <div className="flex items-center justify-between mx-auto">
         <Link href="/" ><a className="text-2xl text-primary dark:text-white hover:no-underline">Wells</a>
         </Link>
-        <ul className="items-center justify-between hidden sm:flex">
+        <ul className="items-center justify-between hidden xl:flex">
           <NavItem href="/portfolio">作品集</NavItem>
           <NavItem href="/about">經歷</NavItem>
           <NavItem href="https://blog.wells.tw">部落格</NavItem>
