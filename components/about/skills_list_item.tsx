@@ -8,13 +8,13 @@ export default function SkillsListItem({ skills, index }:SkillsListItemProps){
   const [element, reveal] = useReveal()
 
   return (
-    <li ref={element} className={`py-9 px-10 bg-white dark:bg-primary-opacity transition-opacity-and-transform duration-500 col-start-2 ${reveal? 'opacity-100' : 'translate-y-20 opacity-0'} ${(index % 4 % 3 == 0)? "xl:col-span-5": "xl:col-span-6"} ${(index % 2 ==0)? "col-span-8": "col-span-9"}`}>
+    <li ref={element} className={`py-9 px-10 bg-white dark:bg-primary-opacity transition-opacity-and-transform duration-500 col-span-full md:col-start-2 ${reveal? 'opacity-100' : 'translate-y-20 opacity-0'} ${(index % 4 % 3 == 0)? "xl:col-span-5": "xl:col-span-6"} ${(index % 2 ==0)? "md:col-span-8": "md:col-span-9"}`}>
       <h3 className="text-2xl font-bold text-cyan-450">{skills.title}</h3>
       <div className="flex mt-5">
-        <ul className="mt-5">
+        <ul className="w-10 mt-5">
           {
             skills.skills.map(skill => (
-              <li key={skill.name} className="mb-5 text-right text-primary dark:text-light">
+              <li key={skill.name} className="mb-5 overflow-x-scroll text-right md:overflow-visible whitespace-nowrap md:whitespace-normal text-primary dark:text-light">
                 {skill.name}
               </li>
             ))

@@ -3,7 +3,7 @@ import ListItem from "./list_item"
 export default function List(listProps:ListProps):React.ReactElement {
   return (
     <div className="grid xl:grid-cols-3 grid-cols-5" id={listProps.id}>
-      <h2 className="absolute hidden text-4xl text-white sm:block font-notosans shadow-gray-700 rotate-90 origin-top-left xl:text-7xl">
+      <h2 className="absolute hidden text-2xl text-white md:text-4xl sm:block font-notosans shadow-gray-700 rotate-90 origin-top-left xl:text-7xl">
         {listProps.backgroundText.split(" ").map(text=>(
           <span key={text}>
             {text}

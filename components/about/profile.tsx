@@ -9,8 +9,8 @@ export default function profoilo():React.ReactElement {
     "合作客戶數": 10
   }
   return (
-    <div id="profile" className="mt-12 grid grid-cols-3 md:mt-36">
-      <div className="w-full">
+    <div id="profile" className="mt-12 grid grid-cols-1 md:grid-cols-3 md:mt-36">
+      <div className="w-full mb-7 md:mb-0">
         <Image
           priority
           layout="responsive"
@@ -19,7 +19,7 @@ export default function profoilo():React.ReactElement {
           width={326}
         />
       </div>
-      <div className="relative ml-12 col-span-2 text-primary dark:text-light font-notosans">
+      <div className="relative md:ml-12 col-span-2 text-primary dark:text-light font-notosans">
         <div>
           <h2 className="text-5xl font-bold tracking-wider">張哲瑋</h2>
           <ul className="mt-10 list-disc list-inside">

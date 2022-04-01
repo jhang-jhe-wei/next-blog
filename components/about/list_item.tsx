@@ -24,9 +24,12 @@ export default function ListItem({item}:{item:ListItemProps}) {
         {item.endedAt}
       </p>
       <h3 className="inline ml-8 text-xl font-bold align-middle xl:text-2xl xl:ml-10 text-cyan-450">
-        {item.title}．
-        <span className="text-base font-normal xl:text-xl">
-          {item.subTitle}
+        {item.title}
+        <span className="block ml-16 md:ml-0 md:inline">
+          ．
+          <span className="text-lg font-normal xl:text-xl">
+            {item.subTitle}
+          </span>
         </span>
       </h3>
       <ul className="mt-5 ml-20 text-base list-disc list-outside xl:mt-8 xl:text-lg xl:ml-28 dark:text-light text-primary">
