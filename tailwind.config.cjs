@@ -50,8 +50,8 @@ module.exports = {
       addComponents({
         '.container': {
           maxWidth: '80%',
-          '@screen md': {
-            maxWidth: '614px',
+          '@screen sm': {
+            maxWidth: '600px',
           },
           '@screen xl': {
             maxWidth: '1024px',

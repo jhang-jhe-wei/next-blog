@@ -36,7 +36,7 @@ export default function profoilo():React.ReactElement {
             </li>
           ))}
         </ul>
-        <div className="mt-12 xl:absolute xl:top-3 xl:right-0">
+        <div className="mt-12 xl:mt-0 xl:absolute xl:top-3 xl:right-0">
           <SocialMediaList/>
         </div>
       </div>

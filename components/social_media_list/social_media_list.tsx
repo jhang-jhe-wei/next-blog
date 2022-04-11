@@ -3,9 +3,9 @@ import FacebookLogo from './facebook_logo'
 import InstagramLogo from './instgram_logo'
 import LinkdinLogo from './linkdin_logo'
 import MailLogo from './mail_logo'
-export default function SocialMediaList({ mode }:{ mode?:string }):React.ReactElement {
+export default function SocialMediaList({ mode, styleName }:{ mode?:string, styleName?:string }):React.ReactElement {
   return (
-    <ul className="flex items-center justify-center">
+    <ul className={`flex items-center ${styleName}`}>
       <li className="mx-2">
         <a href="https://github.com/jhang-jhe-wei">
           <GithubLogo mode={ mode }/>

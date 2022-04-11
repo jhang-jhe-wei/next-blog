@@ -13,14 +13,14 @@ export default function Nav():React.ReactElement{
       <div className="flex items-center justify-between mx-auto">
         <Link href="/" ><a className="text-2xl text-primary dark:text-white hover:no-underline">Wells</a>
         </Link>
-        <div className="items-center hidden xl:flex">
+        <div className="items-center hidden sm:flex">
           <NavItem href="/portfolio">作品集</NavItem>
           <NavItem href="/about">經歷</NavItem>
           <NavItem href="https://blog.wells.tw">部落格</NavItem>
           <NavBtnItem href="mailto:jhang0912407249@gmail.com">聯絡我</NavBtnItem>
           <NavIconItem/>
         </div>
-        <div className="flex items-center justify-between w-36 xl:hidden">
+        <div className="flex items-center justify-between w-36 sm:hidden">
           <NavIconItem/>
           <div className="z-50">
             <NavHamburger reveal={reveal} setReveal={setReveal}/>
