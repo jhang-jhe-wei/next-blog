@@ -1,29 +1,43 @@
-import Image from 'next/image'
-import Layout from '../components/layout'
-import Timer from '../components/timer'
-import utilStyles from  '../styles/utils.module.css'
-import profileImg from '../public/images/profile.png'
+import Nav from '../components/nav/nav'
+import Figure from '../components/landing/figure'
+import Signboard from '../components/landing/signboard'
+import PipelineDiagram from '../components/landing/pipeline_diagram'
+import Footer from '../components/landing/footer'
 
-export const name = "張哲瑋"
-export const id = "b10730224"
 export default function Home():React.ReactElement {
   return (
-    <Layout>
-      <div className="max-w-xl px-4 mx-auto mt-12 mb-24" >
-        <header className="flex flex-col items-center">
-          <Image
-            priority
-            src={profileImg}
-            className={utilStyles.borderCircle}
-            height={144}
-            width={144}
-            alt={name}
-          />
-          <h1 className={`${utilStyles.heading2Xl} dark:text-white`}>{name}</h1>
-          <h2 className={`${utilStyles.headingXl} dark:text-white`}>{id}</h2>
-        </header>
+    <div className="bg-[length:40px_40px] bg-grid-dark dark:bg-grid-light">
+      <style global jsx>{`
+        html,
+        body,
+        body > div:first-child,
+        div#__next,
+        div#__next > div {
+          height: 100%;
+        }
+    `}</style>
+      <Nav bg_opacity/>
+      <div className="mt-5 lg:mt-0">
+        <Signboard/>
       </div>
-      <Timer />
-    </Layout>
+      <div className="justify-center hidden mx-auto mt-20 lg:flex">
+        <PipelineDiagram/>
+        <svg viewBox="0 0 800 503" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <Figure x="300" y="0" width="500"/>
+          <path d="M0 340 H50 Q70 340, 90 360 L 190 480 Q210 500, 230 500 H800" strokeWidth="3" className="hidden lg:block stroke-primary dark:stroke-white"/>
+        </svg>
+      </div>
+      <div className="lg:hidden">
+        <div className="max-w-md mx-auto mt-9">
+          <Figure x="0" y="0" width='100%'/>
+        </div>
+        <div className="pr-10">
+          <PipelineDiagram/>
+        </div>
+        <div className="-translate-y-20">
+          <Footer/>
+        </div>
+      </div>
+   </div>
   )
 }

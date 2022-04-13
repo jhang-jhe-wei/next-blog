@@ -56,7 +56,7 @@ module.exports = {
           '@screen xl': {
             maxWidth: '1024px',
           },
-        }
+        },
       })
     }
   ]

@@ -8,3 +8,19 @@ body {
   @apply font-nobile;
   @apply min-h-screen;
 }
+
+@layer utilities {
+  .bg-grid-dark {
+    background-image:
+      linear-gradient(to right, rgba(10, 37, 62, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(10, 37, 62, 0.1) 1px, transparent 1px);
+  }
+  .bg-grid-light {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  }
+}
+
+
+
