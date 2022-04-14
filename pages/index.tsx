@@ -13,11 +13,11 @@ export default function Home():React.ReactElement {
         body > div:first-child,
         div#__next,
         div#__next > div {
-          height: 100%;
+          min-height: 100vh;
         }
     `}</style>
       <Nav bg_opacity/>
-      <div className="mt-5 lg:mt-0">
+      <div className="mt-2 lg:mt-0">
         <Signboard/>
       </div>
       <div className="justify-center hidden mx-auto mt-20 lg:flex">
@@ -28,13 +28,13 @@ export default function Home():React.ReactElement {
         </svg>
       </div>
       <div className="lg:hidden">
-        <div className="max-w-md mx-auto mt-9">
+        <div className="w-64 mx-auto mt-5 sm:w-80 md:w-96 lg:mt-9">
           <Figure x="0" y="0" width='100%'/>
         </div>
         <div className="pr-10">
           <PipelineDiagram/>
         </div>
-        <div className="-translate-y-20">
+        <div className="-translate-y-10 sm:-translate-y-24">
           <Footer/>
         </div>
       </div>

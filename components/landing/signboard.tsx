@@ -16,8 +16,8 @@ export default function Signboard(){
           <Light/>
         </div>
       </div>
-      <div className="block mt-12 lg:hidden">
-        <div className="max-w-2xl mx-auto">
+      <div className="block mt-10 lg:hidden">
+        <div className="max-w-md mx-auto">
           <Neonsign width='80%'/>
         </div>
       </div>
