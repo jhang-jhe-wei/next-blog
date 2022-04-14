@@ -4,9 +4,9 @@ import profileImg from '../../public/images/profile.png'
 
 export default function profoilo():React.ReactElement {
   const highlights = {
-    "獲得獎牌數": 20,
-    "完成專案數": 99,
-    "合作客戶數": 10
+    "獲得獎牌數": 12,
+    "完成專案數": 30,
+    "合作客戶數": 5
   }
   return (
     <div id="profile" className="mt-12 grid grid-cols-1 md:grid-cols-3 md:mt-36">
@@ -30,7 +30,7 @@ export default function profoilo():React.ReactElement {
         </div>
         <ul className="flex justify-between max-w-xs mt-10">
           {Object.keys(highlights).map(key => (
-            <li key={key} className="text-6xl font-black text-secondary">
+            <li key={key} className="text-6xl font-black text-center text-secondary">
               {highlights[key]}
               <h3 className="mt-1 text-sm text-center dark:text-light text-primary">{key}</h3>
             </li>
