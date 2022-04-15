@@ -3,6 +3,7 @@ import Figure from '../components/landing/figure'
 import Signboard from '../components/landing/signboard'
 import PipelineDiagram from '../components/landing/pipeline_diagram'
 import Footer from '../components/landing/footer'
+import Layout from '../components/layout'
 
 export default function Home():React.ReactElement {
   return (
@@ -16,7 +17,7 @@ export default function Home():React.ReactElement {
           min-height: 100vh;
         }
     `}</style>
-      <Nav bg_opacity/>
+    <Layout>
       <div className="mt-2 lg:mt-0">
         <Signboard/>
       </div>
@@ -38,6 +39,7 @@ export default function Home():React.ReactElement {
           <Footer/>
         </div>
       </div>
+    </Layout>
    </div>
   )
 }
