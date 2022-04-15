@@ -7,16 +7,7 @@ import Layout from '../components/layout'
 
 export default function Home():React.ReactElement {
   return (
-    <div className="bg-[length:40px_40px] bg-grid-dark dark:bg-grid-light">
-      <style global jsx>{`
-        html,
-        body,
-        body > div:first-child,
-        div#__next,
-        div#__next > div {
-          min-height: 100vh;
-        }
-    `}</style>
+    <div className="bg-[length:40px_40px] bg-grid-dark dark:bg-grid-light min-h-screen">
     <Layout>
       <div className="mt-2 lg:mt-0">
         <Signboard/>
@@ -24,7 +15,7 @@ export default function Home():React.ReactElement {
       <div className="justify-center hidden mx-auto mt-20 lg:flex">
         <PipelineDiagram/>
         <svg viewBox="0 0 800 503" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <Figure x="300" y="0" width="500"/>
+          <Figure x="250" y="0" width="500"/>
           <path d="M0 340 H50 Q70 340, 90 360 L 190 480 Q210 500, 230 500 H800" strokeWidth="3" className="hidden lg:block stroke-primary dark:stroke-white"/>
         </svg>
       </div>
