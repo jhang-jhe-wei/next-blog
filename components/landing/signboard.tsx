@@ -4,7 +4,7 @@ export default function Signboard(){
   return (
     <>
       <div className="w-full border-b-4 border-primary dark:border-white">
-        <div className="flex items-end justify-around max-w-xl mx-auto lg:max-w-7xl">
+        <div className="flex items-end justify-around max-w-xl mx-auto lg:max-w-none xl:px-20">
           <Light/>
           <Light/>
           <Light/>
