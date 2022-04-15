@@ -1,13 +1,17 @@
-import { useRef } from "react";
+import { useRef, useEffect, useCallback } from "react";
 export default function Neonsign({width}:{width:string}){
   const element = useRef(null);
-  function loop(time) {
-    // console.log(time)
-    element.current.setAttribute('stroke-dashoffset', time / 20);
+  const animationId = useRef(null);
 
-    requestAnimationFrame(loop)
-  }
-  loop(0);
+  const loop = useCallback((time) => {
+    element.current.setAttribute('stroke-dashoffset', time / 20);
+    animationId.current =  requestAnimationFrame(loop);
+  }, []);
+
+  useEffect(()=>{
+    loop(0);
+    return () => {cancelAnimationFrame(animationId.current)}
+  }, [element])
 
   return (
     <svg className="mx-auto" width={width} viewBox="0 0 579 143" fill="none" xmlns="http://www.w3.org/2000/svg">
