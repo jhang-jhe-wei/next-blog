@@ -9,8 +9,8 @@ const PortfolioModel = array(object({
   tag: string(),
   image: string(),
   description: string(),
-  demo_link: string(),
-  code_link: string(),
+  demo_link: optional(string()),
+  code_link: optional(string()),
   highlight: optional(boolean())
 }))
 

@@ -11,8 +11,12 @@ export default function Card({project}:{project: Project}) {
         <p className="mt-5 text-sm text-zinc-700">{project.description}</p>
       </div>
       <div className="pb-8 mx-6 mt-8">
-        <a className="px-4 py-2 text-sm text-white border rounded-[10px] border-secondary hover:no-underline bg-secondary hover:bg-white hover:text-secondary" href={project.demo_link}>Demo</a>
-        <a className="px-4 py-2 mx-2 text-sm text-white border rounded-[10px] border-secondary hover:no-underline bg-secondary hover:bg-white hover:text-secondary" href={project.code_link}>Source Code</a>
+        {
+          project.demo_link && <a className="px-4 py-2 text-sm mr-2 text-white border rounded-[10px] border-secondary hover:no-underline bg-secondary hover:bg-white hover:text-secondary" href={project.demo_link}>Demo</a>
+        }
+        {
+          project.code_link && <a className="px-4 py-2 text-sm text-white border rounded-[10px] border-secondary hover:no-underline bg-secondary hover:bg-white hover:text-secondary" href={project.code_link}>Source Code</a>
+        }
       </div>
     </div>
   )
