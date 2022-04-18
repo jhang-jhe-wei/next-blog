@@ -11,7 +11,7 @@ export default function Neonsign({width}:{width:string}){
   useEffect(()=>{
     loop(0);
     return () => {cancelAnimationFrame(animationId.current)}
-  }, [element])
+  })
 
   return (
     <svg className="mx-auto" width={width} viewBox="0 0 579 143" fill="none" xmlns="http://www.w3.org/2000/svg">
