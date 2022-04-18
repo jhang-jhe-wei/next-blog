@@ -3,38 +3,40 @@
     tag: 機器人
     image: http://i3.ytimg.com/vi/jO4WLPvJ7fM/hqdefault.jpg
     description: 本作品為一偵察機器人，此機器人可用於探索室內空間及偵查未完全倒塌的建築物，為了使其適應複雜的地形，我們選用六足機器人當作基底，儘管比起輪軸機器人移動速度較緩慢，但是在克服地形障礙上有更大的優勢。本作品利用強化學習 (Reinforcement Learning) 在電腦上模擬各種地形，使機器人在行走時可以自動依照地形變換動作模式。若將此作品用於救災，可使救災者更加了解倒塌建築物的內部情況，我們在機器人上加裝光學雷達，只要收集足夠的數據就可以產生點雲（point cloud）描繪出整個空間的樣貌，且為了使受困者更加容易被找尋到，本機器人也加裝了攝影機，利用 YOLOv4 達到即時影像辨識將能使搜救更加容易。
+    demo_link: https://youtu.be/jO4WLPvJ7fM
     highlight: true
 -
-    title: LINE 聊天機器人—台科不分系學姊1
-    tag: 後端
-    image: https://media.istockphoto.com/photos/contemporary-art-collage-of-human-hand-and-lightbulb-picture-id1337598250?k=20&m=1337598250&s=612x612&w=0&h=E8oPDUKhB12QPuQRL-5dq2MkQgf1UDZIRXDi_d_H0-8=
-    description: 「台科不分系學姊」是一款專為台科全校不分系新生製作的 LINE 聊天機器人，為了解決每年全校不分系新生入學時的困惑，因此由本人主動發想、設計並完成此專案，目前提供選課解答、畢業條件和校內大小事通知等功能。
-    demo_link: https://line.me/R/ti/p/%40152pnuji
-    code_link: https://github.com/jhang-jhe-wei/NTUST-Senior
+    title: STM32 實作手寫板
+    tag: 嵌入式系統
+    image: http://i3.ytimg.com/vi/hzKudp6jNWU/hqdefault.jpg
+    description: 此作品是本人大二下的嵌入式系統實習的專案，使用的開發板是 STM32f746g-DISCOVERY。
+    demo_link: https://youtu.be/hzKudp6jNWU
+    code_link: https://github.com/jhang-jhe-wei/Simple-drawing-board-based-on-STM32f746g-DISCOVERY
 -
-    title: LINE 聊天機器人—台科不分系學姊2
-    tag: 前端
-    image: https://media.istockphoto.com/photos/contemporary-art-collage-of-human-hand-and-lightbulb-picture-id1337598250?k=20&m=1337598250&s=612x612&w=0&h=E8oPDUKhB12QPuQRL-5dq2MkQgf1UDZIRXDi_d_H0-8=
-    description: 「台科不分系學姊」是一款專為台科全校不分系新生製作的 LINE 聊天機器人，為了解決每年全校不分系新生入學時的困惑，因此由本人主動發想、設計並完成此專案，目前提供選課解答、畢業條件和校內大小事通知等功能。
-    highlight: true
+    title: STM32 實作手寫辨識
+    tag: 嵌入式系統
+    image: http://i3.ytimg.com/vi/0QSbi8sorVI/hqdefault.jpg
+    description: 此作品是本人大二下的嵌入式系統實習的專案，使用的開發板是 STM32f746g-DISCOVERY。
+    demo_link: https://youtu.be/0QSbi8sorVI
+    code_link: https://github.com/jhang-jhe-wei/AI-handwriting-recognition-based-on-STM32f746g-DISCOVERY
 -
-    title: LINE 聊天機器人—台科不分系學姊4
-    tag: 其他
-    image: https://media.istockphoto.com/photos/contemporary-art-collage-of-human-hand-and-lightbulb-picture-id1337598250?k=20&m=1337598250&s=612x612&w=0&h=E8oPDUKhB12QPuQRL-5dq2MkQgf1UDZIRXDi_d_H0-8=
-    description: 「台科不分系學姊」是一款專為台科全校不分系新生製作的 LINE 聊天機器人，為了解決每年全校不分系新生入學時的困惑，因此由本人主動發想、設計並完成此專案，目前提供選課解答、畢業條件和校內大小事通知等功能。
-    code_link: https://github.com/jhang-jhe-wei/NTUST-Senior
-    highlight: true
+    title: STM32 實作快速傅立葉轉換
+    tag: 嵌入式系統
+    image: http://i3.ytimg.com/vi/0QSbi8sorVI/hqdefault.jpg
+    description: 此作品是本人大二下的嵌入式系統實習的專案，使用的開發板是 STM32f746g-DISCOVERY。
+    demo_link: https://youtu.be/NJCQbo03_Y8
+    code_link: https://github.com/jhang-jhe-wei/Fast-Fourier-transform-using-microphone-in-STM32f746g-DISCOVERY
 -
-    title: LINE 聊天機器人—台科不分系學姊5
-    tag: 其他
-    image: https://media.istockphoto.com/photos/contemporary-art-collage-of-human-hand-and-lightbulb-picture-id1337598250?k=20&m=1337598250&s=612x612&w=0&h=E8oPDUKhB12QPuQRL-5dq2MkQgf1UDZIRXDi_d_H0-8=
-    description: 「台科不分系學姊」是一款專為台科全校不分系新生製作的 LINE 聊天機器人，為了解決每年全校不分系新生入學時的困惑，因此由本人主動發想、設計並完成此專案，目前提供選課解答、畢業條件和校內大小事通知等功能。
-    demo_link: https://line.me/R/ti/p/%40152pnuji
-    code_link: https://github.com/jhang-jhe-wei/NTUST-Senior
+    title: STM32 實作按鈕控制 LCD
+    tag: 嵌入式系統
+    image: http://i3.ytimg.com/vi/cr1C7mOcJQ0/hqdefault.jpg
+    description: 此作品是本人大二下的嵌入式系統實習的專案，使用的開發板是 STM32f746g-DISCOVERY。
+    demo_link: https://youtu.be/cr1C7mOcJQ0
+    code_link: https://github.com/jhang-jhe-wei/Using-user-button-control-LCD-LED-in-STM32f746g-DISCOVERY
 -
-    title: LINE 聊天機器人—台科不分系學姊6
-    tag: 其他
-    image: https://media.istockphoto.com/photos/contemporary-art-collage-of-human-hand-and-lightbulb-picture-id1337598250?k=20&m=1337598250&s=612x612&w=0&h=E8oPDUKhB12QPuQRL-5dq2MkQgf1UDZIRXDi_d_H0-8=
+    title: LINE 聊天機器人—台科不分系學姊
+    tag: 軟體系統
+    image: /images/ntust-senior.jpg
     description: 「台科不分系學姊」是一款專為台科全校不分系新生製作的 LINE 聊天機器人，為了解決每年全校不分系新生入學時的困惑，因此由本人主動發想、設計並完成此專案，目前提供選課解答、畢業條件和校內大小事通知等功能。
     demo_link: https://line.me/R/ti/p/%40152pnuji
     code_link: https://github.com/jhang-jhe-wei/NTUST-Senior

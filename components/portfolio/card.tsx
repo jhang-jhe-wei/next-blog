@@ -5,10 +5,10 @@ export default function Card({project}:{project: Project}) {
 
   return(
     <div ref={element} className={`mx-auto max-w-xs bg-white font-notosans transition-all duration-500 ${reveal? 'opacity-100' : 'translate-y-20 opacity-0'}`}>
-      <img className="h-80 w-80 object-center" src={project.image} alt="Sunset in the mountains"/>
+      <img className="h-80 w-80 object-scale-down object-center bg-gray-300" src={project.image} alt="Sunset in the mountains"/>
       <div className="mx-6 mt-5 text-lg">
         <h2 className="font-bold text-secondary">{project.title}</h2>
-        <p className="line-clamp-8 mt-5 text-sm text-zinc-700 max-h-40">{project.description}</p>
+        <p className="line-clamp-4 mt-5 text-sm text-zinc-700">{project.description}</p>
       </div>
       <div className="pb-8 mx-6 mt-8">
         {
