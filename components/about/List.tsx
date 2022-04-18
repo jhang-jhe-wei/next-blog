@@ -16,7 +16,7 @@ export default function List(listProps:ListProps):React.ReactElement {
       </div>
       <div className="relative z-20 col-span-4 xl:col-span-2">
         <h2 className="absolute block text-3xl left-10 md:left-12 -top-16 xl:hidden text-secondary">{listProps.category}</h2>
-        <ul className="pb-12 list-disc list-inside border-l border-gray-400">
+        <ul className="pb-12 border-l border-gray-400">
           {
             listProps.data.map(item => (
               <ListItem key={item.title} item={item}/>
