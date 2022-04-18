@@ -12,6 +12,9 @@ module.exports = {
       center: true,
     },
     extend: {
+      lineClamp: {
+        8: '8',
+      },
       margin: {
         '6.5': '26px',
         '8.5': '34px'
@@ -46,6 +49,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('@tailwindcss/line-clamp'),
     function ({ addComponents }) {
       addComponents({
         '.container': {
