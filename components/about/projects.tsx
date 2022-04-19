@@ -15,7 +15,7 @@ export default function Projects({projects}: ProjectsProps) {
         }
       </ul>
       <div className="text-center border-b border-gray-400 dark:border-white">
-        <a href="/portfolio" className="inline-block pt-3 pb-2 pl-3 pr-2 text-gray-400 border border-gray-400 dark:bg-primary dark:text-white bg-light translate-y-1/2">SHOW MORE &gt;</a>
+        <a href="/portfolio" className="inline-block pt-3 pb-2 pl-3 pr-2 text-gray-400 border border-gray-400 duration-500 hover:scale-125 dark:bg-primary dark:text-white bg-light translate-y-1/2">SHOW MORE &gt;</a>
       </div>
     </div>
   )

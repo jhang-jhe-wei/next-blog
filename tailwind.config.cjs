@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       lineClamp: {
-        8: '8',
+        7: '7',
       },
       margin: {
         '6.5': '26px',
