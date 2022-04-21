@@ -5,7 +5,7 @@ export default function Card({project}:{project: Project}) {
 
   return(
     <div ref={element} className={`hover:scale-110 mx-auto max-w-xs bg-white font-notosans transition-all duration-500 ${reveal? 'opacity-100' : 'translate-y-20 opacity-0'}`}>
-      <img className="object-scale-down object-center bg-gray-300 h-80 w-80" src={project.image} alt="Sunset in the mountains"/>
+      <img className="object-scale-down object-center bg-gray-300 h-60 w-80" src={project.image} alt="Sunset in the mountains"/>
       <div className="mx-6 mt-5 text-lg">
         <h2 className="font-bold text-secondary">{project.title}</h2>
         <p className="mt-5 text-sm line-clamp-5 text-zinc-700">{project.description}</p>
