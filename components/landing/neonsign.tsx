@@ -3,15 +3,15 @@ export default function Neonsign({width}:{width:string}){
   const element = useRef(null);
   const animationId = useRef(null);
 
-  const loop = useCallback((time) => {
-    element.current.setAttribute('stroke-dashoffset', time / 20);
-    animationId.current =  requestAnimationFrame(loop);
-  }, []);
-
   useEffect(()=>{
+    function loop(time) {
+      if(element.current){
+        element.current.setAttribute('stroke-dashoffset', time / 20);
+        animationId.current =  requestAnimationFrame(loop);
+      }
+    }
     loop(0);
-    return () => {cancelAnimationFrame(animationId.current)}
-  })
+  }, [])
 
   return (
     <svg className="mx-auto" width={width} viewBox="0 0 579 143" fill="none" xmlns="http://www.w3.org/2000/svg">
