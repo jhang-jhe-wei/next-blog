@@ -1,12 +1,11 @@
 import Light from './light'
 import Neonsign from './neonsign'
-import { useContext } from 'react'
-import { LandingContext } from '../../context/landing_context'
+import { Provider } from 'react-redux'
+import { lightsStore } from '../../storages/landing_storage'
 
 export default function Signboard(){
-  const { light, setLight } = useContext(LandingContext);
   return (
-    <>
+    <Provider store={lightsStore}>
       <div className="w-full border-b-4 border-primary dark:border-white">
         <div className="flex items-end justify-around max-w-xl mx-auto lg:max-w-none xl:px-20">
           <Light index={0} />
@@ -25,6 +24,6 @@ export default function Signboard(){
           <Neonsign width='80%'/>
         </div>
       </div>
-    </>
+    </Provider>
   )
 }
