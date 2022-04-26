@@ -3,7 +3,7 @@ export default function Footer():React.ReactElement {
   return (
     <footer className="bg-primary dark:bg-light py-9">
       <div className="px-10 md:justify-between md:flex">
-        <p className="mb-6 text-xl text-center text-light dark:text-primary text-nobile">jhang0912407249@gmail.com</p>
+        <p className="mb-6 text-xl text-center md:mb-0 text-light dark:text-primary text-nobile">jhang0912407249@gmail.com</p>
         <SocialMediaList styleName="justify-center" mode="dark"/>
       </div>
     </footer>
