@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import light_slice from '../features/light/light_slice'
+import figure_slice from '../features/figure/figure_slice';
 
 export const store = configureStore({
   reducer: {
       light: light_slice,
+      figure: figure_slice
   }
 })
 
