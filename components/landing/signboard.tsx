@@ -1,10 +1,7 @@
 import Light from './light'
 import Neonsign from './neonsign'
-import { useContext } from 'react'
-import { LandingContext } from '../../context/landing_context'
 
 export default function Signboard(){
-  const { light, setLight } = useContext(LandingContext);
   return (
     <>
       <div className="w-full border-b-4 border-primary dark:border-white">

@@ -3,11 +3,10 @@ import Signboard from '../components/landing/signboard'
 import PipelineDiagram from '../components/landing/pipeline_diagram'
 import Footer from '../components/landing/footer'
 import Layout from '../components/layout'
-import LandingProvider from '../context/landing_context'
 
 export default function Home():React.ReactElement {
   return (
-    <LandingProvider>
+    <>
       <div className="bg-[length:40px_40px] bg-grid-dark dark:bg-grid-light min-h-screen">
         <Layout>
           <div className="mt-2 lg:mt-0">
@@ -33,6 +32,6 @@ export default function Home():React.ReactElement {
           </div>
         </Layout>
       </div>
-    </LandingProvider>
+    </>
   )
 }
