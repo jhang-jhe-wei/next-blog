@@ -1,8 +1,8 @@
-import { useLandingDispatch } from "../../storage/hooks";
+import { useAppDispatch } from "../../reducers/store";
 import { useCallback } from "react";
-import { trunAllOn, trunAllOff } from "../../features/light/light_slice";
+import { trunAllOn, trunAllOff } from "../../reducers/light/light_slice";
 export default function NavIconItem():React.ReactElement{
-  const dispatch = useLandingDispatch();
+  const dispatch = useAppDispatch();
   const switchMode = useCallback(()=>{
     let root = document.documentElement;
     if(root.className == ""){

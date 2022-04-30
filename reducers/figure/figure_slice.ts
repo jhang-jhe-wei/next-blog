@@ -1,23 +1,28 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 interface FigureState {
-  value: Boolean[];
+  left: boolean;
+  right: boolean;
 }
 
 const initialState: FigureState = {
-  value: Array(2).fill(true)
+  left: true,
+  right: true
 }
 
 export const figureSlice = createSlice({
   name: 'figure',
   initialState,
   reducers: {
-    toggle: (state, action: PayloadAction<number>) => {
-      state.value[action.payload] = !state.value[action.payload];
+    toggleRight: (state) => {
+      state.right = !state.right;
     },
+    toggleLeft: (state) => {
+      state.left = !state.left;
+    }
   }
 })
 
-export const { toggle } = figureSlice.actions
+export const { toggleLeft, toggleRight } = figureSlice.actions
 
 export default figureSlice.reducer

@@ -1,9 +1,9 @@
-import { useLandingSelector, useLandingDispatch } from '../../storage/hooks';
-import { toggle } from '../../features/light/light_slice';
+import { useAppSelector, useAppDispatch } from '../../reducers/store';
+import { toggle } from '../../reducers/light/light_slice';
 
 export default function Light({index}){
-  const reveal = useLandingSelector(state => state.light.value[index]);
-  const dispatch = useLandingDispatch();
+  const reveal = useAppSelector(state => state.light.value[index]);
+  const dispatch = useAppDispatch();
 
   return (
     <svg className="w-7 lg:w-12" viewBox="0 0 48 103" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={()=>{dispatch(toggle(index))}}>
