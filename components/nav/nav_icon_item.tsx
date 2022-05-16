@@ -1,19 +1,18 @@
 import { useAppDispatch, useAppSelector } from "../../reducers/store";
-import { useCallback } from "react";
 import { trunAllOn, trunAllOff } from "../../reducers/light/light_slice";
 import { switchMode } from "../../reducers/mode/mode_slice";
 export default function NavIconItem():React.ReactElement{
   const dispatch = useAppDispatch();
   const mode = useAppSelector(state => state.mode.value)
-  const clickHandler = useCallback(()=>{
-    if(mode == "light"){
+  const clickHandler = ()=>{
+    if(mode === "light"){
       dispatch(trunAllOn());
     }else{
       dispatch(trunAllOff());
     }
     dispatch(switchMode());
-  }, [])
-  
+  }
+
   return (
     <div className="h-full ml-12 hover:text-secondary dark:hover:text-secondary text-primary dark:text-white" onClick={clickHandler}>
       <button className="align-middle">

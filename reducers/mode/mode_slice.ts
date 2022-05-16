@@ -13,7 +13,7 @@ export const modeSlice = createSlice({
   initialState,
   reducers: {
     switchMode: (state) => {
-      if(state.value == "dark"){
+      if(state.value === "dark"){
         document.documentElement.className = "";
         state.value = "light";
       }else{
