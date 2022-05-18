@@ -5,7 +5,7 @@ import Beeper from "./beeper"
 import SwitchBox from "./switch_box"
 import SocialMediaList from "../social_media_list/social_media_list"
 import { useAppDispatch } from "../../reducers/store"
-import { changeColor, changeStrokeColor } from "../../reducers/neonsign/neonsign_slice"
+import { changeColor, changeStrokeColor, changeStrokeState } from "../../reducers/neonsign/neonsign_slice"
 
 export default function PipelineDiagram(){
   const dispatch = useAppDispatch();
@@ -40,9 +40,9 @@ export default function PipelineDiagram(){
 
       <path d="M0 140 H260 Q270 140, 280 150 L330 200 Q340 210, 340 220 V300" strokeWidth="3" className="stroke-primary dark:stroke-white"/>
       <ButtonBox x="320" y="300" clickHandlers={[
-        () => dispatch(changeColor("red")),
-        () => dispatch(changeColor("yellow")),
-        () => dispatch(changeColor("green"))
+        () => dispatch(changeStrokeState("forward")),
+        () => dispatch(changeStrokeState("stop")),
+        () => dispatch(changeStrokeState("reverse"))
       ]}/>
 
 

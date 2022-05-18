@@ -1,15 +1,24 @@
 import { useAppSelector } from '../../reducers/store';
 import { useRef, useEffect } from "react";
+import { StrokeStates } from '../../reducers/neonsign/neonsign_slice';
 export default function Neonsign({width}:{width:string}){
   const element = useRef(null);
   const animationId = useRef(null);
   const color = useAppSelector(state => state.neonsign.color);
   const strokeColor = useAppSelector(state => state.neonsign.strokeColor);
+  const strokeState = useRef<StrokeStates>("forward");
+  strokeState.current = useAppSelector(state => state.neonsign.strokeState);
 
   useEffect(()=>{
+    let strokeOffset = 0;
     function loop(time) {
       if(element.current){
-        element.current.setAttribute('stroke-dashoffset', time / 20);
+        if(strokeState.current === "forward"){
+          strokeOffset += time / 200;
+        }else if(strokeState.current === "reverse"){
+          strokeOffset -= time / 200;
+        }
+        element.current.setAttribute('stroke-dashoffset', strokeOffset);
         animationId.current =  requestAnimationFrame(loop);
       }
     }
