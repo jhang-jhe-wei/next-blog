@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+type Modes = "light" | "dark";
 interface ModeState {
-  value: string
+  value: Modes;
 }
 
 const initialState: ModeState = {
@@ -14,10 +15,8 @@ export const modeSlice = createSlice({
   reducers: {
     switchMode: (state) => {
       if(state.value === "dark"){
-        document.documentElement.className = "";
         state.value = "light";
       }else{
-        document.documentElement.className = "dark";
         state.value = "dark";
       }
     }
