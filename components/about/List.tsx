@@ -2,9 +2,9 @@ import { ListProps } from "../../interfaces/about_interface"
 import ListItem from "./list_item"
 export default function List(listProps:ListProps):React.ReactElement {
   return (
-    <div className="grid xl:grid-cols-3 grid-cols-5" id={listProps.id}>
-      <h2 className="absolute hidden text-white md:text-4xl md:block font-notosans shadow-gray-700 rotate-90 origin-top-left xl:text-7xl">
-        {listProps.backgroundText.split(" ").map(text=>(
+    <div className={`grid xl:grid-cols-3 grid-cols-5 ${listProps.styleName} break-inside-avoid`} id={listProps.id}>
+      <h2 className="absolute hidden text-white md:text-4xl md:block font-notosans shadow-gray-700 rotate-90 origin-top-left xl:text-7xl print:md:hidden">
+        {listProps.backgroundText?.split(" ").map(text=>(
           <span key={text}>
             {text}
             <br/>

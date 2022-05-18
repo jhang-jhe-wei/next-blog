@@ -131,7 +131,7 @@ skillsList:
       title: 網站後端
       skills:
         -
-          name: Ruby on Rails
+          name: Rails
           proficiency: 80
         -
           name: Bash
@@ -143,7 +143,7 @@ skillsList:
       title: DSL
       skills:
         -
-          name: Sketchup Ruby API
+          name: Sketchup
           proficiency: 50
         -
           name: PLC

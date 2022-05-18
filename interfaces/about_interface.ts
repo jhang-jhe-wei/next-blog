@@ -1,16 +1,17 @@
 export interface ListItemProps {
   title: string;
-  subTitle: string;
-  startedAt: string;
-  endedAt: string;
+  subTitle?: string;
+  startedAt?: string;
+  endedAt?: string;
   highlights: string[];
 }
 
 export interface ListProps {
   category: string;
-  backgroundText: string;
-  id: string;
+  backgroundText?: string;
+  id?: string;
   data: ListItemProps[];
+  styleName?: string;
 }
 
 export interface AchievementProps {

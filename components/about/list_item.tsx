@@ -15,7 +15,7 @@ export default function ListItem({item}:{item:ListItemProps}) {
   }, [reveal])
 
   return (
-    <li ref={element} className={`relative mb-16 text-3xl xl:text-4xl text-gray-400 transition-all duration-500 ${reveal? 'opacity-100' : 'translate-y-20 opacity-0'} break-inside-avoid print:mb-5`}>
+    <li ref={element} className={`relative mb-16 text-3xl xl:text-4xl text-gray-400 transition-all duration-500 ${reveal? 'opacity-100' : 'translate-y-20 opacity-0'} print:mb-5 break-inside-avoid print:opacity-100 print:translate-y-0`}>
       <svg viewBox="0 0 2 2" className="absolute z-10 w-2 -left-1.25 top-2 print:top-1">
         <circle cx="1" cy="1" r="1" className="fill-gray-400" />
       </svg>
@@ -24,7 +24,9 @@ export default function ListItem({item}:{item:ListItemProps}) {
           <p className="max-w-[2ch] break-words md:max-w-full print:max-w-full">
             {item.startedAt}
           </p>
-          ~
+            {
+              item.endedAt && "~"
+            }
           <p className="max-w-[2ch] break-words md:max-w-full print:max-w-full">
           {item.endedAt}
           </p>
@@ -33,15 +35,18 @@ export default function ListItem({item}:{item:ListItemProps}) {
           <h3 className="text-xl font-bold align-middle print:text-xs xl:text-2xl text-cyan-450">
             {item.title}
             <span className="block md:inline print:inline">
-              <svg viewBox="0 0 2 2" className="w-1.5 inline mr-2 md:mx-2 print:ml-2">
-                <circle cx="1" cy="1" r="1" className="fill-cyan-450" />
-              </svg>
+              {
+                item.subTitle &&
+                <svg viewBox="0 0 2 2" className="w-1.5 inline mr-2 md:mx-2 print:ml-2">
+                  <circle cx="1" cy="1" r="1" className="fill-cyan-450" />
+                </svg>
+              }
               <span className="text-lg font-normal xl:text-xl print:text-xs">
                 {item.subTitle}
               </span>
             </span>
           </h3>
-          <ul className="mt-5 text-base list-disc list-inside xl:text-lg dark:text-light text-primary print:mt-0 print:text-xs">
+          <ul className="mt-5 text-base list-disc list-inside xl:text-lg dark:text-light text-primary print:mt-1 print:text-[10px] print:leading-4">
             {item.highlights.map(highlight => (
               <li key={highlight}>{highlight}</li>
             ))}
