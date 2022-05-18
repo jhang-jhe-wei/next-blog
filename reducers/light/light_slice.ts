@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
+
 interface LightState {
   value: Boolean[];
 }
@@ -24,7 +25,7 @@ export const lightSlice = createSlice({
     toggleAll: state => {
       state.value = state.value.map(element => (!element));
     }
-  }
+  },
 })
 
 export const { trunAllOn, trunAllOff, toggle, toggleAll } = lightSlice.actions

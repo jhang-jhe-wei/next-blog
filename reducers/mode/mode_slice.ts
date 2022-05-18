@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+import { trunAllOn, trunAllOff } from '../light/light_slice'
+
 interface ModeState {
   value: string
 }
@@ -12,18 +14,25 @@ export const modeSlice = createSlice({
   name: 'mode',
   initialState,
   reducers: {
-    switchMode: (state) => {
-      if(state.value === "dark"){
-        document.documentElement.className = "";
-        state.value = "light";
-      }else{
-        document.documentElement.className = "dark";
-        state.value = "dark";
-      }
-    }
-}
+    // switchMode: (state) => {
+    //   if(state.value === "dark"){
+    //     document.documentElement.className = "";
+    //     state.value = "light";
+    //   }else{
+    //     document.documentElement.className = "dark";
+    //     state.value = "dark";
+    //   }
+    // }
+  },
+  extraReducers: builder => {
+    builder
+      .addCase(trunAllOn, (state) => ({
+        value: "dark",
+      }))
+      .addCase(trunAllOff, (state) => ({
+        value: "light",
+      }))
+  }
 })
-
-export const { switchMode } = modeSlice.actions
 
 export default modeSlice.reducer

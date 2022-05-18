@@ -3,7 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 import { AppState, AppDispatch } from './store';
 
 import { trunAllOn, trunAllOff } from "./light/light_slice";
-import { switchMode } from "./mode/mode_slice";
+// import { switchMode } from "./mode/mode_slice";
 
 export const navIconItemClicked = createAsyncThunk<void, void, {
   dispatch: AppDispatch, state: AppState,
@@ -16,6 +16,6 @@ export const navIconItemClicked = createAsyncThunk<void, void, {
       thunkAPI.dispatch(trunAllOff());
     }
 
-    thunkAPI.dispatch(switchMode());
+    // thunkAPI.dispatch(switchMode());
   }
 )
