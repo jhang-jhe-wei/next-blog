@@ -11,13 +11,18 @@ export default function Neonsign({width}:{width:string}){
 
   useEffect(()=>{
     let strokeOffset = 0;
+    let lastTime = 0;
     function loop(time) {
       if(element.current){
+        const timeDiff = time - lastTime;
+        lastTime = time;
+
         if(strokeState.current === "forward"){
-          strokeOffset += time / 200;
+          strokeOffset += timeDiff / 20;
         }else if(strokeState.current === "reverse"){
-          strokeOffset -= time / 200;
+          strokeOffset -= timeDiff / 20;
         }
+
         element.current.setAttribute('stroke-dashoffset', strokeOffset);
         animationId.current =  requestAnimationFrame(loop);
       }
