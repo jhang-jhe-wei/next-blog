@@ -12,10 +12,10 @@ export const lightSlice = createSlice({
   name: 'light',
   initialState,
   reducers: {
-    trunAllOn: state => {
+    turnAllOn: state => {
       state.value = Array(6).fill(true);
     },
-    trunAllOff: state => {
+    turnAllOff: state => {
       state.value = Array(6).fill(false);
     },
     toggle: (state, action: PayloadAction<number>) => {
@@ -27,6 +27,6 @@ export const lightSlice = createSlice({
   }
 })
 
-export const { trunAllOn, trunAllOff, toggle, toggleAll } = lightSlice.actions
+export const { turnAllOn, turnAllOff, toggle, toggleAll } = lightSlice.actions
 
 export default lightSlice.reducer
