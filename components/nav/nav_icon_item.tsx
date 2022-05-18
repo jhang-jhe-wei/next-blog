@@ -1,16 +1,9 @@
-import { useAppDispatch, useAppSelector } from "../../reducers/store";
-import { trunAllOn, trunAllOff } from "../../reducers/light/light_slice";
-import { switchMode } from "../../reducers/mode/mode_slice";
+import { useAppDispatch } from "../../reducers/store";
+import { navIconItemClicked } from "../../reducers/actions";
 export default function NavIconItem():React.ReactElement{
   const dispatch = useAppDispatch();
-  const mode = useAppSelector(state => state.mode.value)
   const clickHandler = ()=>{
-    if(mode === "light"){
-      dispatch(trunAllOn());
-    }else{
-      dispatch(trunAllOff());
-    }
-    dispatch(switchMode());
+    dispatch(navIconItemClicked());
   }
 
   return (
