@@ -2,7 +2,7 @@ export default function Toc():React.ReactElement {
   const tags = ["關於我", "教育背景", "工作經驗", "獲獎與成就", "技能專長"]
   const anchors = ["profile", "education", "works", "achievements", "skills"]
   return (
-    <ul className="justify-center hidden mt-20 sm:flex">
+    <ul className="justify-center hidden mt-20 sm:flex print:hidden print:sm:hidden">
     { tags.map((tag, index) =>
     <li key={ tag } className={`px-6 text-base text-center  ${(index == tags.length -1)? "": "border-r-2 border-primary dark:border-white"}`}>
       <button onClick={()=>{

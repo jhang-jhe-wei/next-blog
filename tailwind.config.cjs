@@ -12,6 +12,9 @@ module.exports = {
       center: true,
     },
     extend: {
+      spacing: {
+        '1.25': '5px',
+      },
       lineClamp: {
         7: '7',
       },

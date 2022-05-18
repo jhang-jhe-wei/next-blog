@@ -27,10 +27,10 @@ export default function about({education, works, achievements, skillsList, proje
     <Layout>
       <div className="container mx-auto">
         <Head><title>Wells 的經歷</title></Head>
-        <h1 className="mt-32 text-5xl text-center text-primary dark:text-light">About</h1>
+        <h1 className="mt-32 text-5xl text-center text-primary dark:text-light print:hidden">About</h1>
         <Toc/>
         <Profile/>
-        <div className="mt-56">
+        <div className="mt-56 print:mt-14">
           <List id="education" category="教育背景" backgroundText="Education Background" data={education} />
           <List id="works" category="工作經驗" backgroundText="Work Experience" data={works} />
         </div>

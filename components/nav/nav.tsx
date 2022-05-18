@@ -9,7 +9,7 @@ import { useState } from 'react'
 export default function Nav():React.ReactElement{
   const [reveal, setReveal] = useState(false);
   return (
-    <nav className="sticky top-0 z-30 px-10 py-6 bg-light dark:bg-primary bg-opacity-60 dark:bg-opacity-60 backdrop-blur dark:backdrop-blur">
+    <nav className="sticky top-0 z-30 px-10 py-6 bg-light dark:bg-primary bg-opacity-60 dark:bg-opacity-60 backdrop-blur dark:backdrop-blur print:hidden">
       <div className="flex items-center justify-between mx-auto">
         <Link href="/" ><a className="text-2xl text-primary dark:text-white hover:no-underline">Wells</a>
         </Link>
