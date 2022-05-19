@@ -2,7 +2,7 @@ import { SkillsListProps } from "../../interfaces/about_interface"
 import SkillsListItem from "./skills_list_item"
 export default function SkillsList({ data }:SkillsListProps):React.ReactElement {
   return (
-    <div id="skills" className="mt-32 print:mt-0">
+    <div id="skills" className="mt-32 print:mt-0 print:hidden">
       <h2 className="hidden text-4xl text-center text-white md:block font-notosans shadow-gray-700 xl:text-7xl print:md:hidden">
         Skills
       </h2>
