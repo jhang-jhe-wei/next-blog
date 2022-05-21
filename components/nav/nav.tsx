@@ -16,7 +16,7 @@ export default function Nav():React.ReactElement{
         <div className="items-center hidden sm:flex">
           <NavItem href="/portfolio">作品集</NavItem>
           <NavItem href="/about">經歷</NavItem>
-          <NavItem href="https://blog.wells.tw">部落格</NavItem>
+          <NavItem href="https://blog.wells.tw" newTab={true} >部落格</NavItem>
           <NavBtnItem href="mailto:jhang0912407249@gmail.com">聯絡我</NavBtnItem>
           <NavIconItem/>
         </div>

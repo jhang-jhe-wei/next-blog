@@ -6,5 +6,6 @@ export interface NavBtnItemProps {
 
 export interface NavItemProps {
   href: string;
+  newTab?: boolean;
   children: React.ReactNode;
 }
