@@ -1,32 +1,4 @@
 -
-    title: STM32 實作手寫板
-    tag: 嵌入式系統
-    image: http://i3.ytimg.com/vi/hzKudp6jNWU/hqdefault.jpg
-    description: 此作品是本人大二下的嵌入式系統實習的專案，使用的開發板是 STM32f746g-DISCOVERY。
-    demo_link: https://youtu.be/hzKudp6jNWU
-    code_link: https://github.com/jhang-jhe-wei/Simple-drawing-board-based-on-STM32f746g-DISCOVERY
--
-    title: STM32 實作手寫辨識
-    tag: 嵌入式系統
-    image: http://i3.ytimg.com/vi/0QSbi8sorVI/hqdefault.jpg
-    description: 此作品是本人大二下的嵌入式系統實習的專案，使用的開發板是 STM32f746g-DISCOVERY。
-    demo_link: https://youtu.be/0QSbi8sorVI
-    code_link: https://github.com/jhang-jhe-wei/AI-handwriting-recognition-based-on-STM32f746g-DISCOVERY
--
-    title: STM32 實作快速傅立葉轉換
-    tag: 嵌入式系統
-    image: http://i3.ytimg.com/vi/NJCQbo03_Y8/hqdefault.jpg
-    description: 此作品是本人大二下的嵌入式系統實習的專案，使用的開發板是 STM32f746g-DISCOVERY。
-    demo_link: https://youtu.be/NJCQbo03_Y8
-    code_link: https://github.com/jhang-jhe-wei/Fast-Fourier-transform-using-microphone-in-STM32f746g-DISCOVERY
--
-    title: STM32 實作按鈕控制 LCD
-    tag: 嵌入式系統
-    image: http://i3.ytimg.com/vi/cr1C7mOcJQ0/hqdefault.jpg
-    description: 此作品是本人大二下的嵌入式系統實習的專案，使用的開發板是 STM32f746g-DISCOVERY。
-    demo_link: https://youtu.be/cr1C7mOcJQ0
-    code_link: https://github.com/jhang-jhe-wei/Using-user-button-control-LCD-LED-in-STM32f746g-DISCOVERY
--
     title: LINE 聊天機器人—台科不分系學姊
     tag: 軟體系統
     image: /images/ntust-senior.jpg
@@ -56,6 +28,41 @@
     tag: 軟體系統
     image: /images/line-push-custom.png
     description: 此案的需求為建立一個 LINE Chatbot 後台管理系統，此後台會記錄含有此機器人的群組，可為每個群組加上標籤，核心功能為群發，可指定標籤及群組，傳送內容包含文字和檔案，若傳送檔案為pdf，會轉換成圖片後加上浮水印再傳至群組聊天室。
+-
+    title: 留言板系統
+    tag: 軟體系統
+    image: /images/web-security.png
+    description: 此作品是網頁安全的期中作業，在不使用任何框架和第三方套件的前提下製作一個留言板系統，並需要防禦其他人的攻擊，在其中本人製作了一個簡易的 MVC 架構，並且符合 Restful API 的設計原則。
+    demo_link: https://web-security.wells.tw
+    code_link: https://github.com/jhang-jhe-wei/Websecurity-middle-project
+-
+    title: STM32 實作手寫板
+    tag: 嵌入式系統
+    image: http://i3.ytimg.com/vi/hzKudp6jNWU/hqdefault.jpg
+    description: 此作品是本人大二下的嵌入式系統實習的專案，使用的開發板是 STM32f746g-DISCOVERY。
+    demo_link: https://youtu.be/hzKudp6jNWU
+    code_link: https://github.com/jhang-jhe-wei/Simple-drawing-board-based-on-STM32f746g-DISCOVERY
+-
+    title: STM32 實作手寫辨識
+    tag: 嵌入式系統
+    image: http://i3.ytimg.com/vi/0QSbi8sorVI/hqdefault.jpg
+    description: 此作品是本人大二下的嵌入式系統實習的專案，使用的開發板是 STM32f746g-DISCOVERY。
+    demo_link: https://youtu.be/0QSbi8sorVI
+    code_link: https://github.com/jhang-jhe-wei/AI-handwriting-recognition-based-on-STM32f746g-DISCOVERY
+-
+    title: STM32 實作快速傅立葉轉換
+    tag: 嵌入式系統
+    image: http://i3.ytimg.com/vi/NJCQbo03_Y8/hqdefault.jpg
+    description: 此作品是本人大二下的嵌入式系統實習的專案，使用的開發板是 STM32f746g-DISCOVERY。
+    demo_link: https://youtu.be/NJCQbo03_Y8
+    code_link: https://github.com/jhang-jhe-wei/Fast-Fourier-transform-using-microphone-in-STM32f746g-DISCOVERY
+-
+    title: STM32 實作按鈕控制 LCD
+    tag: 嵌入式系統
+    image: http://i3.ytimg.com/vi/cr1C7mOcJQ0/hqdefault.jpg
+    description: 此作品是本人大二下的嵌入式系統實習的專案，使用的開發板是 STM32f746g-DISCOVERY。
+    demo_link: https://youtu.be/cr1C7mOcJQ0
+    code_link: https://github.com/jhang-jhe-wei/Using-user-button-control-LCD-LED-in-STM32f746g-DISCOVERY
 -
     title: JAVA 實作星際大戰
     tag: 遊戲
