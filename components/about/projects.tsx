@@ -6,7 +6,7 @@ interface ProjectsProps {
 
 export default function Projects({projects}: ProjectsProps) {
   return (
-    <div className="mt-40">
+    <div className="mt-40 print:hidden">
       <h2 className="hidden text-4xl text-center text-white md:block font-notosans shadow-gray-700 xl:text-7xl">Projects</h2>
       <h2 className="mt-5 text-3xl text-center text-secondary">專案</h2>
       <ul className="mt-10">
