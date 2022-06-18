@@ -1,4 +1,3 @@
-import Image from "next/image"
 import SocialMediaList from "../social_media_list/social_media_list"
 import profileImg from '../../public/images/profile.png'
 
@@ -11,10 +10,8 @@ export default function profoilo():React.ReactElement {
   return (
     <div id="profile" className="mt-12 grid grid-cols-1 md:grid-cols-3 md:mt-36 print:grid-cols-4 print:gap-x-5 md:gap-x-12 print:md:grid-cols-4 print:mt-14 print:md:mt-14">
       <div className="w-full mb-7 md:mb-0 print:mb-0">
-        <Image
-          priority
-          layout="responsive"
-          src={profileImg}
+        <img
+          src={profileImg.src}
           height={332}
           width={326}
         />
