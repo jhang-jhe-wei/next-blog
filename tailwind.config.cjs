@@ -8,6 +8,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    maxHeight: {
+      'screen-1/2': '50vh',
+      'screen-95': '95vh',
+    },
     container: {
       center: true,
     },
@@ -32,6 +36,7 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
+        'dark-mask': '#00000088',
         'primary': '#0A253E',
         'primary-opacity': '#243B52',
         'secondary': '#F67024',

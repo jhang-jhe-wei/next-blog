@@ -3,6 +3,8 @@ import { AppProps } from 'next/app'
 import store, {  useAppSelector } from '../reducers/store'
 import { Provider } from 'react-redux'
 import { useEffect } from 'react'
+import Modal from 'react-modal';
+Modal.setAppElement('#__next');
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
