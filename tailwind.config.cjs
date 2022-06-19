@@ -9,8 +9,8 @@ module.exports = {
   ],
   theme: {
     maxHeight: {
-      'screen-1/2': '50vh',
-      'screen-95': '95vh',
+      'screen-1/3': '33vh',
+      'screen-80': '80vh',
     },
     container: {
       center: true,

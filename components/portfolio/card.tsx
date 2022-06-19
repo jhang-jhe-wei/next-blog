@@ -22,11 +22,11 @@ export default function Card({ project }: { project: Project }) {
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Project Modal"
-        className="bg-white max-w-md flex flex-col max-h-screen-95"
+        className="bg-white max-w-md flex flex-col max-h-screen-80"
         overlayClassName="z-40 fixed inset-0 bg-dark-mask px-5 flex justify-center items-center"
       >
-        <div className="overflow-y-scroll flex-1">
-          <img className="object-scale-down object-center bg-gray-300 w-full max-h-screen-1/2" src={project.image} alt={project.title} />
+        <div className="overflow-y-auto flex-1">
+          <img className="object-scale-down object-center bg-gray-300 w-full max-h-screen-1/3" src={project.image} alt={project.title} />
           <div className="mx-6 mt-5 text-lg">
             <h2 className="font-bold text-secondary">{project.title}</h2>
             <p className="mt-5 text-sm text-zinc-700">{project.description}</p>
