@@ -3,7 +3,7 @@ export interface ListItemProps {
   subTitle?: string;
   startedAt?: string;
   endedAt?: string;
-  highlights: string[];
+  highlights?: string[];
 }
 
 export interface ListProps {

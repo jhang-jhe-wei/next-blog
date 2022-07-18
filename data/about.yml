@@ -20,27 +20,10 @@ education:
 
 works:
   -
-    title: "資訊長"
-    subTitle: "毫米隧道科技股份有限公司"
-    startedAt: "六月 2020"
-    endedAt: "一月 2021"
-    highlights:
-      - "本人與學長姐一同創立的新創公司"
-      - "在半年內募得百萬創業獎金"
-      - "經濟部創業歸故里數位應用獎/ Shooly 水電資訊媒合平台/ 75 萬創業獎金"
-      - "Line ChatBot 設計大賽冠軍/ Shooly 水電資訊媒合平台/ 10 萬獎金"
-      - "教育部 109 U-Start 第一階段入圍/ PP-Bank 子母帳戶系統/ 35 萬創業獎金"
-      - "科技部 2020 FITI 全國前 40 名/ PP-Bank 子母帳戶系統/ 5 萬創業獎金"
-  -
-    title: "Free Lancer"
-    subTitle: "MYSELF"
-    startedAt: "一月 2019"
+    title: "工程師"
+    subTitle: "Cyberbiz"
+    startedAt: "七月 2022"
     endedAt: "Present"
-    highlights:
-      - Sketchup 3D 鋼筋智慧建模插件，減少建築師 90% 鋼筋建模時間成本
-      - 製作幫助新生入學的聊天機器人「台科不分系學姊」，新生使用率達到 95%
-      - LINE Chatbot 客製化群組推播系統，解決只能全群或單群發送的限制
-      - 維護 Rails 聊天機器人開源框架「Kamigo」
   -
     title: "Part Time"
     subTitle: "愛好資訊科技有限公司"
@@ -52,6 +35,28 @@ works:
       - 維護 AlphaCamp Lighthouse
       - 升級 RubyJobs 網站
       - 開發網站監測系統(uptime.tw)
+  -
+    title: "Free Lancer"
+    subTitle: "MYSELF"
+    startedAt: "一月 2019"
+    endedAt: "Present"
+    highlights:
+      - Sketchup 3D 鋼筋智慧建模插件，減少建築師 90% 鋼筋建模時間成本
+      - 製作幫助新生入學的聊天機器人「台科不分系學姊」，新生使用率達到 95%
+      - LINE Chatbot 客製化群組推播系統，解決只能全群或單群發送的限制
+      - 維護 Rails 聊天機器人開源框架「Kamigo」
+  -
+    title: "資訊長"
+    subTitle: "毫米隧道科技股份有限公司"
+    startedAt: "六月 2020"
+    endedAt: "一月 2021"
+    highlights:
+      - "本人與學長姐一同創立的新創公司"
+      - "在半年內募得百萬創業獎金"
+      - "經濟部創業歸故里數位應用獎/ Shooly 水電資訊媒合平台/ 75 萬創業獎金"
+      - "Line ChatBot 設計大賽冠軍/ Shooly 水電資訊媒合平台/ 10 萬獎金"
+      - "教育部 109 U-Start 第一階段入圍/ PP-Bank 子母帳戶系統/ 35 萬創業獎金"
+      - "科技部 2020 FITI 全國前 40 名/ PP-Bank 子母帳戶系統/ 5 萬創業獎金"
   -
     title: "家教/助教"
     subTitle: "仲介委託/台科大電機系 Java 課程"

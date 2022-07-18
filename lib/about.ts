@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import YAML from 'yaml'
-import { assert, object, number, boolean, string, array } from 'superstruct'
+import { assert, object, number, boolean, string, array, optional } from 'superstruct'
 
 const filePath = path.join(process.cwd(), 'data', 'about.yml')
 const AboutModel = object({
@@ -17,7 +17,7 @@ const AboutModel = object({
     subTitle: string(),
     startedAt: string(),
     endedAt: string(),
-    highlights: array(string())
+    highlights: optional((array(string())))
   })),
   achievements: array(object({
     title: string(),
